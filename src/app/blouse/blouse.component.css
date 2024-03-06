@@ -1,0 +1,260 @@
+#blouse{
+    background-color: rgb(241, 239, 246);
+}
+#blouse .banner{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#blouse .row{
+    justify-content: space-evenly;
+    margin: 0;
+    color: rgb(51, 4, 96);
+    font-family:'__Poppins_687492','__Poppins_Fallback_687492';
+}
+#blouse .row h2{
+    font-weight: 800;
+}
+#blouse .row p{
+    text-align: justify;
+}
+#blouse .photo{
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#blouse .sleeveless,#blouse .embroidery{
+    background-color: white;
+}
+#blouse .b_gallery{
+    background-color: white;
+}
+#blouse .b_gallery .gcard{
+    border-radius: 10px;
+    border: 1px solid rgb(51, 4, 96);
+}
+#blouse .b_gallery .head{
+    color: rgb(51, 4, 96);
+    font-weight: 600;
+    font-style: italic;
+    font-family:'__Poppins_687492','__Poppins_Fallback_687492';
+    letter-spacing: 2px;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 400px){
+    #blouse .banner{
+        height: 125px;
+    }
+    #blouse .row{
+        margin: 0;
+        padding: 20px 0px;
+    }
+    #blouse .row h2{
+        font-size: 20px;
+    }
+    #blouse .row p{
+        font-size: 14px;
+    }
+    #blouse .photo{
+        height: 220px;
+    }
+    #blouse .sleeveless,#blouse .embroidery{
+        flex-direction: column-reverse;
+    }
+    #blouse .b_gallery{
+        padding: 20px 0px;
+    }
+    #blouse .b_gallery .gcard{
+        height: 150px;
+    }
+    #blouse .b_gallery .head{
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 576px){
+    #blouse .banner{
+        height: 145px;
+    }
+    #blouse .row{
+        margin: 0;
+        padding: 20px 0px;
+    }
+    #blouse .row h2{
+        font-size: 23px;
+    }
+    #blouse .row p{
+        font-size: 15px;
+    }
+    #blouse .photo{
+        height: 220px;
+    }
+    #blouse .sleeveless,#blouse .embroidery{
+        flex-direction: column-reverse;
+    }
+    #blouse .b_gallery{
+        padding: 20px 0px;
+    }
+    #blouse .b_gallery .gcard{
+        height: 170px;
+    }
+    #blouse .b_gallery .head{
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    #blouse .banner{
+        height: 185px;
+    }
+    #blouse .row{
+        margin: 0;
+        padding: 25px 0px;
+    }
+    #blouse .row h2{
+        font-size: 26px;
+    }
+    #blouse .row p{
+        font-size: 17px;
+    }
+    #blouse .photo{
+        height: 200px;
+    }
+    #blouse .b_gallery{
+        padding: 20px 0px;
+    }
+    #blouse .b_gallery .gcard{
+        height: 200px;
+    }
+    #blouse .b_gallery .head{
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    #blouse .banner{
+        height: 250px;
+    }
+    #blouse .row{
+        margin: 0;
+        padding: 30px 0px;
+    }
+    #blouse .row h2{
+        font-size: 29px;
+    }
+    #blouse .row p{
+        font-size: 17px;
+    }
+    #blouse .photo{
+        height: 250px;
+    }
+    #blouse .b_gallery{
+        padding: 25px 0px;
+    }
+    #blouse .b_gallery .gcard{
+        height: 220px;
+    }
+    #blouse .b_gallery .head{
+        font-size: 26px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    #blouse .banner{
+        height: 330px;
+    }
+    #blouse .row{
+        margin: 0;
+        padding: 35px 0px;
+    }
+    #blouse .row h2{
+        font-size: 32px;
+    }
+    #blouse .row p{
+        font-size: 20px;
+    }
+    #blouse .photo{
+        height: 300px;
+    }
+    #blouse .b_gallery{
+        padding: 20px 0px;
+    }
+    #blouse .b_gallery .gcard{
+        height: 250px;
+    }
+    #blouse .b_gallery .head{
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1400px){
+    #blouse .banner{
+        height: 380px;
+    }
+    #blouse .row{
+        margin: 0;
+        padding: 40px 0px;
+    }
+    #blouse .row h2{
+        font-size: 35px;
+    }
+    #blouse .row p{
+        font-size: 20px;
+    }
+    #blouse .photo{
+        height: 300px;
+    }
+    #blouse .b_gallery{
+        padding: 20px 0px;
+    }
+    #blouse .b_gallery .gcard{
+        height: 290px;
+    }
+    #blouse .b_gallery .head{
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 1400px){
+    #blouse .banner{
+        height: 380px;
+    }
+    #blouse .row{
+        margin: 0;
+        padding: 40px 0px;
+    }
+    #blouse .row h2{
+        font-size: 35px;
+    }
+    #blouse .row p{
+        font-size: 22px;
+    }
+    #blouse .photo{
+        height: 300px;
+        border-radius: 10px 1px 10px 1px;
+    }
+    #blouse .b_gallery{
+        padding: 20px 0px;
+    }
+    #blouse .b_gallery .gcard{
+        height: 330px;
+    }
+    #blouse .b_gallery .head{
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+}

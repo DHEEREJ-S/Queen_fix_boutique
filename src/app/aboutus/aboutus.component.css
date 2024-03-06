@@ -1,0 +1,204 @@
+#aboutus1{
+    background-color: #f1eff6;
+    color: #330460;
+    font-family:'__Poppins_687492','__Poppins_Fallback_687492';
+}
+#aboutus1 p,#aboutus2 p{
+    text-align: justify;
+}
+#aboutus1 .mhead{
+    color: #330460;
+}
+#aboutus1 .story .photo{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#aboutus2 .whyqf{
+    background-color: white;
+    color: #330460;
+    font-family:'__Poppins_687492','__Poppins_Fallback_687492';
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 400px){
+
+    #aboutus1 p,#aboutus2 p{
+        font-size: 14px;
+        text-indent: 45px;
+    }
+    #aboutus1 .mhead{
+        padding: 5px 0px;
+    }
+    
+    #aboutus1 h1,#aboutus2 h1{
+        font-size: 20px;
+        text-align: center;
+    }
+    #aboutus1 .story .photo{
+        height: 250px;
+        width: 250px;
+        margin: auto;
+    }
+    #aboutus2 .whyqf h1{
+        padding: 10px 0px;
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 576px){
+    #aboutus1 p,#aboutus2 p{
+        font-size: 15px;
+        text-indent: 45px;
+    }
+    #aboutus1 .mhead{
+        padding: 5px 0px;
+    }
+    
+    #aboutus1 h1,#aboutus2 h1{
+        font-size: 21px;
+        text-align: center;
+    }
+    #aboutus1 .story .photo{
+        height: 300px;
+        width: 300px;
+        margin: auto;
+    }
+    #aboutus2 .whyqf h1{
+        padding: 10px 0px;
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    #aboutus1 p,#aboutus2 p{
+        font-size: 17px;
+        text-indent: 45px;
+    }
+    #aboutus1 .mhead{
+        padding: 5px 0px;
+    }
+    #aboutus1 h1,#aboutus2 h1{
+        font-size: 24px;
+        text-align: center;
+    }
+    #aboutus1 .story .photo{
+        height: 200px;
+        width: 200px;
+        margin: auto;
+    }
+    #aboutus2 .whyqf h1{
+        padding: 10px 0px;
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    #aboutus1{
+        padding: 15px 0px 20px;
+    }
+    #aboutus1 p,#aboutus2 p{
+        font-size: 17px;
+        text-indent: 45px;
+    }
+    #aboutus1 .mhead{
+        padding: 5px 0px;
+    }
+    #aboutus1 h1,#aboutus2 h1{
+        font-size: 26px;
+        text-align: center;
+    }
+    #aboutus1 .story .photo{
+        height: 270px;
+        width: 270px;
+        margin: auto;
+    }
+    #aboutus2 .whyqf h1{
+        padding: 10px 0px;
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    #aboutus1{
+        padding: 20px 0px 20px;
+    }
+    #aboutus1 p,#aboutus2 p{
+        font-size: 20px;
+        text-indent: 45px;
+    }
+    #aboutus1 .mhead{
+        padding: 5px 0px;
+    }
+    #aboutus1 h1,#aboutus2 h1{
+        font-size: 29px;
+        text-align: center;
+    }
+    #aboutus1 .story .photo{
+        height: 250px;
+        width: 300px;
+        margin: auto;
+    }
+    #aboutus2 .whyqf h1{
+        padding: 10px 0px;
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1400px){
+    #aboutus1{
+        padding: 20px 0px 20px;
+    }
+    #aboutus1 p,#aboutus2 p{
+        font-size: 20px;
+        text-indent: 45px;
+    }
+    #aboutus1 .mhead{
+        padding: 5px 0px;
+    }
+    #aboutus1 h1,#aboutus2 h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    #aboutus1 .story .photo{
+        height: 330px;
+        width: 400px;
+        margin: auto;
+    }
+    #aboutus2 .whyqf h1{
+        padding: 10px 0px;
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 1400px){
+    #aboutus1{
+        padding: 20px 0px 20px;
+    }
+    #aboutus1 p,#aboutus2 p{
+        font-size: 22px;
+        text-indent: 45px;
+    }
+    #aboutus1 .mhead{
+        padding: 5px 0px;
+    }
+    #aboutus1 h1,#aboutus2 h1{
+        font-size: 32px;
+        text-align: center;
+    }
+    #aboutus1 .story .photo{
+        height: 250px;
+        width: 250px;
+        margin: auto;
+    }
+    #aboutus2 .whyqf h1{
+        padding: 10px 0px;
+        margin: 0;
+    }
+}

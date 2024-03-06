@@ -1,0 +1,11 @@
+<div *ngIf="user_status">
+    <app-nav-bar></app-nav-bar>
+    <router-outlet></router-outlet>
+    <app-testimonial></app-testimonial>
+    <app-footer></app-footer>
+</div>
+
+
+<div *ngIf="admin_status">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,237 @@
+/* testimonial */
+
+#testimonial{
+    background-color: #f1eff6;
+    padding: 20px;
+}
+#testimonial .photo{
+    margin: auto;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#testimonial .head p{
+    color: #330460;
+    font-size: 35px;
+    margin: 0;
+    font-family:'__Poppins_687492','__Poppins_Fallback_687492';
+}
+#testimonial .symbol{
+    color: #dfc43b;
+    font-size: 45px;
+    font-family: Tahoma ;
+    font-weight: 800;
+}
+#testimonial .row p{
+    text-align: justify;
+    text-indent: 20px;
+    font-size: 15px;
+    font-family:'__Poppins_687492','__Poppins_Fallback_687492';
+    font-weight: 400;
+    color: rgb(51, 4, 96);
+    letter-spacing: 1.5px;
+}
+#testimonial .row h4{
+    color: rgb(51, 4, 96);
+    font-size: 25px;
+    font-family:'__Poppins_687492','__Poppins_Fallback_687492';
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+    /* testimonial */
+    
+    #testimonial{
+        padding: 20px;
+    }
+    #testimonial .head p{
+        font-size: 20px;
+        text-align: center;
+        line-height: 30px;
+    }
+    #testimonial .head .symbol{
+        font-size: 30px;
+    }
+    #testimonial .row p{
+        text-indent: 15px;
+        font-size: 14px;
+        letter-spacing: .5px;
+    }
+    #testimonial .row h4{
+        font-size: 15px;
+    }
+ }
+
+
+ @media screen and (min-width: 400px) and (max-width: 576px) {
+    /* testimonial */
+    
+    #testimonial{
+        padding: 20px;
+    }
+    
+    #testimonial .head p{
+        font-size: 20px;
+        text-align: center;
+    }
+    #testimonial .head .symbol{
+        font-size: 30px;
+    }
+    #testimonial .row p{
+        text-indent: 15px;
+        font-size: 14px;
+        letter-spacing: .5px;
+    }
+    #testimonial .row h4{
+        font-size: 15px;
+    }
+ }
+
+
+ @media screen and (min-width: 576px) and (max-width: 768px) {
+    /* testimonial */
+    
+    #testimonial{
+        padding: 20px;
+    }
+    #testimonial .photo{
+        width: 100%;
+        height: 250px;
+    }
+    #testimonial .head p{
+        font-size: 25px;
+        text-align: center;
+        line-height: 30px;
+    }
+    #testimonial .head .symbol{
+        font-size: 30px;
+    }
+    #testimonial .row p{
+        text-indent: 10px;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    #testimonial .row h4{
+        font-size: 18px;
+    }
+ }
+
+
+ @media screen and (min-width: 768px) and (max-width: 992px){
+    /* testimonial */
+    
+    #testimonial{
+        padding: 20px;
+    }
+    #testimonial .photo{
+        height: 230px;
+        width: 230px;
+    }
+    #testimonial .head p{
+        font-size: 30px;
+        text-align: center;
+        line-height: 30px;
+    }
+    #testimonial .head .symbol{
+        font-size: 30px;
+    }
+    #testimonial .row p{
+        text-indent: 10px;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    #testimonial .row h4{
+        font-size: 18px;
+    }
+ }
+
+ @media screen and (min-width: 992px) and (max-width: 1200px){
+    /* testimonial */
+    
+    #testimonial{
+        padding: 20px;
+    }
+    #testimonial .photo{
+        height: 300px;
+        width: 300px;
+    }
+    #testimonial .head p{
+        font-size: 35px;
+        text-align: center;
+        line-height: 30px;
+    }
+    #testimonial .head .symbol{
+        font-size: 30px;
+    }
+    #testimonial .row p{
+        text-indent: 10px;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    #testimonial .row h4{
+        font-size: 20px;
+    }
+ }
+
+ @media screen and (min-width: 1200px) and (max-width: 1400px){
+    /* testimonial */
+    
+    #testimonial{
+        padding: 20px;
+    }
+    #testimonial .photo{
+        height: 330px;
+        width: 330px;
+    }
+    #testimonial .head p{
+        font-size: 35px;
+        text-align: center;
+        line-height: 30px;
+    }
+    #testimonial .symbol{
+        font-size: 40px;
+    }
+    #testimonial .row p{
+        text-indent: 10px;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    #testimonial .row h4{
+        font-size: 20px;
+    }
+ }
+
+ @media screen and (min-width: 1400px){
+    /* testimonial */
+    
+    #testimonial{
+        padding: 20px;
+    }
+    #testimonial .photo{
+        height: 300px;
+        width: 300px;
+    }
+    #testimonial .head p{
+        font-size: 35px;
+        text-align: center;
+        line-height: 30px;
+    }
+    #testimonial .head .symbol{
+        font-size: 30px;
+    }
+    #testimonial .row{
+        padding: 0;
+    }
+    #testimonial .feed{
+        padding-top: 0px;
+    }
+    #testimonial .row p{
+        text-indent: 10px;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    #testimonial .row h4{
+        font-size: 20px;
+    }
+ }

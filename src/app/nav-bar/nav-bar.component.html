@@ -1,0 +1,45 @@
+<div class="marquee_box" style="background-color: rgb(51, 4, 96);"><marquee style="color:white; font-size: 12px;">Get 20% off on your first personalized order</marquee></div>
+<div id="default" style="box-shadow: rgba(51, 4, 96, 0.4) 0px 10px 10px -10px;">
+    <div class="container-fluid mynav" style="border-bottom: 1px solid #0f377f; ">
+            <div class="row p-2 justify-content-between">
+                <div class="col-3 px-md-5">
+                <a [routerLink]="['']" (click)="admin()"><img class="logo" src="assets/home_img/Queenfix.png" alt="logo"></a>
+                </div>
+                <div class="col-7 r_link align-self-center d-none d-lg-inline">
+                    <a [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact : true}" [routerLink]="['']">HOME</a>
+                    <a [routerLinkActive]="'active'" [routerLink]="['service']">SERVICE</a>
+                    <a [routerLinkActive]="'active'" [routerLink]="['gallery']">GALLERY</a>
+                    <a [routerLinkActive]="'active'" [routerLink]="['aboutus']">ABOUT US</a>
+                    <a [routerLinkActive]="'active'" [routerLink]="['order']">ORDER</a>
+                    <a [routerLinkActive]="'active'" [routerLink]="['contact']">CONTACT</a>
+                </div>
+                <div class="col-2 col-lg-1 align-self-center">
+                    <div class="d-none d-lg-inline-block"><a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa-brands fa-instagram icons"></i></a></div>
+                    <div class="d-none d-lg-inline-block ps-2 ps-xl-3"><a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp icons"></i></a></div>
+    <!--  -->
+                    <div class="mynavbox float-end"><button class="btn navbtn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="--bs-btn-border-width:0"><i class="fa-solid fa-bars"></i></button>
+                        <div class="offcanvas offcanvas-end" tabindex="2" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <div id="offcanvasRightLabel"><img class="navlogo" src="assets/home_img/Queenfix.png" alt="logo" ></div>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <hr style="color: #0f377f;" class="m-0">
+                            <div class="offcanvas-body list">
+                                <div><a [routerLink]="['']" data-bs-dismiss="offcanvas" aria-label="Close">Home</a></div>
+                                <div><a [routerLink]="['service']" data-bs-dismiss="offcanvas" aria-label="Close">Service</a></div>
+                                <div><a [routerLink]="['gallery']" data-bs-dismiss="offcanvas" aria-label="Close">Gallery</a></div>
+                                <div><a [routerLink]="['aboutus']" data-bs-dismiss="offcanvas" aria-label="Close">About us</a></div>
+                                <div><a [routerLink]="['order']" data-bs-dismiss="offcanvas" aria-label="Close">Order</a></div>
+                                <div><a [routerLink]="['contact']" data-bs-dismiss="offcanvas" aria-label="Close">Contact</a></div>
+                                <div class="pt-3">
+                                    <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa-brands fa-instagram icons"></i></a>
+                                    <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp icons"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    <!--  -->
+                </div>
+            </div>
+        </div>
+</div>

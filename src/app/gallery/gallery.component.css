@@ -1,0 +1,105 @@
+#gallery{
+    background-image: linear-gradient(to bottom right, #f1eff6, #7b4ba8);
+}
+#gallery .gcard{
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid rgb(51, 4, 96);
+}
+#gallery .head{
+    color: rgb(51, 4, 96);
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 400px){
+    .gallery{
+        padding: 15px 0px;
+    }
+    #gallery .gcard{
+        height: 150px;
+    }
+    #gallery .head{
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 576px){
+    .gallery{
+        padding: 15px 0px;
+    }
+    #gallery .gcard{
+        height: 170px;
+    }
+    #gallery .head{
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .gallery{
+        padding: 20px 0px;
+    }
+    #gallery .gcard{
+        height: 200px;
+    }
+    #gallery .head{
+        font-size: 22px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .gallery{
+        padding: 20px 0px;
+    }
+    #gallery .gcard{
+        height: 220px;
+    }
+    #gallery .head{
+        font-size: 24px;
+    }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    .gallery{
+        padding: 25px 0px;
+    }
+    #gallery .gcard{
+        height: 250px;
+    }
+    #gallery .head{
+        font-size: 26px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1400px){
+    .gallery{
+        padding: 25px 0px;
+    }
+    #gallery .gcard{
+        height: 290px;
+    }
+    #gallery .head{
+        font-size: 28px;
+    }
+}
+
+
+@media screen and (min-width: 1400px){
+    .gallery{
+        padding: 25px 0px;
+    }
+    #gallery .gcard{
+        height: 300px;
+    }
+    #gallery .head{
+        font-size: 30px;
+    }
+}

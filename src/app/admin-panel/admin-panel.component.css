@@ -1,0 +1,204 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.at{
+    font-family: Nunito Sans;
+    font-size: 30px;
+}
+.asb{
+    font-family: Nunito Sans;
+    font-size: 20px;
+}
+.ft{
+    font-family: Nunito Sans;
+    font-size: 24px;
+    font-weight: 700;
+}
+.fv{
+    font-family: Nunito Sans;
+    font-size: 20px;
+}
+.adminNav{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+.shadowb{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.shadowcard{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.panel .order .content h4{
+    display: inline-block;
+}
+
+.panel .navcard{
+    margin: auto;
+    border-radius: 20px;
+    padding: 50px 0px;
+    width: 350px;
+    background-color: #330460;
+    color: #f1eff6;
+}
+
+.panel .navcard h3{
+    font-size: 30px;
+}
+.panel .navcard i{
+    font-size: 50px;
+}
+.bs{
+    color: #f1eff6;
+    background-color: #330460;
+}
+.bs:hover{
+    color: #e7d83b;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 400px){
+    .at{
+        font-size: 17px;
+    }
+    .asb{
+        font-size: 14px;
+    }
+    .ft{
+        font-size: 15px;
+    }
+    .fv{
+        font-size: 14px;
+    }
+    .panel .navcard{
+        padding: 30px 0px;
+        width: 250px;
+    }
+    
+    .panel .navcard h3{
+        font-size: 22px;
+    }
+    .panel .navcard i{
+        font-size: 30px;
+    }
+    .bar{
+        font-size: 22px;
+    }
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 576px){
+    .at{
+        font-size: 19px;
+    }
+    .asb{
+        font-size: 15px;
+    }
+    .ft{
+        font-size: 15px;
+    }
+    .fv{
+        font-size: 15px;
+    }
+    .panel .navcard{
+        padding: 30px 0px;
+        width: 280px;
+    }
+    .panel .navcard h3{
+        font-size: 22px;
+    }
+    .panel .navcard i{
+        font-size: 30px;
+    }
+    .bar{
+        font-size: 24px;
+    }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .at{
+        font-size: 22px;
+    }
+    .asb{
+        font-size: 16px;
+    }
+    .ft{
+        font-size: 19px;
+    }
+    .fv{
+        font-size: 16px;
+    }
+    .panel .navcard{
+        padding: 35px 0px;
+        width: 260px;
+    }
+    .panel .navcard h3{
+        font-size: 22px;
+    }
+    .panel .navcard i{
+        font-size: 35px;
+    }
+    .bar{
+        font-size: 26px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .at{
+        font-size: 25px;
+    }
+    .asb{
+        font-size: 17px;
+    }
+    .ft{
+        font-size: 20px;
+    }
+    .fv{
+        font-size: 17px;
+    }
+    .panel .navcard{
+        padding: 40px 0px;
+        width: 270px;
+    }
+    .panel .navcard h3{
+        font-size: 26px;
+    }
+    .panel .navcard i{
+        font-size: 40px;
+    }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    .at{
+        font-size: 27px;
+    }
+    .asb{
+        font-size: 19px;
+    }
+    .ft{
+        font-size: 22px;
+    }
+    .fv{
+        font-size: 19px;
+    }
+    .panel .navcard{
+        padding: 45px 0px;
+        width: 320px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1400px){
+    
+}
+
+
+@media screen and (min-width: 1400px){
+    .panel .navcard{
+        padding: 50px 0px;
+        width: 400px;
+    }
+}

@@ -1,0 +1,45 @@
+<div class="container-fluid align-item-center" style="min-height: 100vh; background-color: #f1eff6;">
+    <div *ngIf="!forgot_password" class="pt-5">
+        <div class="row justify-content-center">
+            <div class="col-8 card p-3 p-md-4 col-sm-5 mb-3">
+                <form>
+                    <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label ft">Email</label>
+                    <input type="email" class="form-control" name="email" [(ngModel)]="email">
+                    </div>
+                    <div class="mb-2 mb-md-3">
+                    <label for="exampleInputPassword1" class="form-label ft">Password</label>
+                    <input type="password" class="form-control" name="password" [(ngModel)]="password">
+                    </div>
+                    <div class="row">
+                        <div class="mb-2 mb-lg-0 col-6 col-lg-4 centert">
+                            <a (click)="forgotpassword()" class="text-dark st" style="text-decoration: none;"> Forgot Password ? </a>
+                        </div>
+                        <div class="mb-2 mb-lg-0 col-6 col-lg-4 centert">
+                            <a (click)="backToWeb()" class="text-dark st" style="text-decoration: none;">Back to Website</a>
+                        </div>
+                        <div class="col-12 col-lg-4 text-center text-lg-end">
+                            <button type="button" class="btn px-3 px-md-4 px-xl-5 py-1 py-md-2 bt ft" (click)="login()">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="forgot_password" class="pt-5">
+        <div class="row justify-content-center">
+        <div class="col-8 card p-3 p-md-4 col-sm-5 mb-3">
+            <label for="exampleInputEmail1" class="form-label ft">Email</label>
+            <input type="email" class="form-control mt-2" name="email" [(ngModel)]="emailsend">
+            <div class="row pt-3">
+                <div class="col-5 centert">
+                    <a (click)="backToLogin()" style="text-decoration: none;" class="st text-dark">Back to Login</a>
+                </div>
+                <div class="col-7 text-end">
+                    <button type="button" class="btn px-3 px-md-4 px-xl-5 py-1 py-md-2 bt ft" (click)="sendlink()">Send Link</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

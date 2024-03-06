@@ -1,0 +1,608 @@
+@import "~animate.css/animate.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+/* You can add global styles to this file, and also import other style files */
+/* scroll bar */
+/* width */
+/* body{
+    cursor: url("assets/home_img/cursor.png"), auto;
+    
+} */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(51, 4, 96); 
+}  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:rgb(51, 4, 96); 
+    border-radius: 7px;
+}
+/* scroll bar end */
+/* header */
+.centert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centerh{
+    display: flex;
+    justify-content: center;
+}
+.centerv{
+    display: flex;
+    align-items: center;
+}
+/* gallery */
+#gallery .owl-theme .owl-dots .owl-dot span {
+    background-color: rgb(51, 4, 96) !important;
+}
+#gallery .owl-theme .owl-dots .owl-dot:hover span, #gallery .owl-theme .owl-dots .owl-dot.active span{
+    background-color: rgb(223, 196, 59) !important;
+}
+/* blouse */
+#blouse .b_gallery .owl-theme .owl-dots .owl-dot span {
+    background-color: rgb(51, 4, 96) !important;
+}
+#blouse .b_gallery .owl-theme .owl-dots .owl-dot:hover span, #blouse .b_gallery .owl-theme .owl-dots .owl-dot.active span{
+    background-color: rgb(223, 196, 59) !important;
+}
+.form-control{
+    color: rgb(51, 4, 96) !important;
+    box-shadow: none !important;
+    border-color: rgb(51, 4, 96) !important;
+}
+
+
+
+/* testimonial */
+/* 
+#testimonial .owl-theme .owl-nav [class*=owl-]{
+    background-color: rgb(241, 239, 246) !important;
+    color: rgb(51, 4, 96) !important;
+    font-size: 40px;
+} 
+
+#testimonial .owl-theme .owl-nav .owl-next{
+    position: absolute !important;
+    right: 6%;
+    bottom: 0%;
+}
+#testimonial .owl-theme .owl-nav .owl-prev{
+    position: absolute !important;
+    right: 9%;
+    bottom: 0%;
+} */
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+   
+    /* testimonial */
+
+    #testimonial .owl-theme .owl-nav [class*=owl-]{
+        background-color: rgb(241, 239, 246) !important;
+        color: rgb(51, 4, 96) !important;
+        font-size: 20px !important;
+    } 
+
+    #testimonial .owl-theme .owl-nav .owl-next{
+        position: absolute !important;
+        right: 0%;
+        bottom: 0%;
+    }
+    #testimonial .owl-theme .owl-nav .owl-prev{
+        position: absolute !important;
+        right: 6%;
+        bottom: 0%;
+    }
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 576px) {
+
+    /* testimonial */
+
+    #testimonial .owl-theme .owl-nav [class*=owl-]{
+        background-color: rgb(241, 239, 246) !important;
+        color: rgb(51, 4, 96) !important;
+        font-size: 20px !important;
+    } 
+
+    #testimonial .owl-theme .owl-nav .owl-next{
+        position: absolute !important;
+        right: 1%;
+        bottom: 0%;
+    }
+    #testimonial .owl-theme .owl-nav .owl-prev{
+        position: absolute !important;
+        right: 5%;
+        bottom: 0%;
+    }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    /* testimonial */
+
+    #testimonial .owl-theme .owl-nav [class*=owl-]{
+        background-color: rgb(241, 239, 246) !important;
+        color: rgb(51, 4, 96) !important;
+        font-size: 20px !important;
+    } 
+
+    #testimonial .owl-theme .owl-nav .owl-next{
+        position: absolute !important;
+        right: 1%;
+        bottom: 0%;
+    }
+    #testimonial .owl-theme .owl-nav .owl-prev{
+        position: absolute !important;
+        right: 5%;
+        bottom: 0%;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    /* testimonial */
+
+    #testimonial .owl-theme .owl-nav [class*=owl-]{
+        background-color: rgb(241, 239, 246) !important;
+        color: rgb(51, 4, 96) !important;
+        font-size: 25px !important;
+    } 
+
+    #testimonial .owl-theme .owl-nav .owl-next{
+        position: absolute !important;
+        right: 1%;
+        bottom: 0%;
+    }
+    #testimonial .owl-theme .owl-nav .owl-prev{
+        position: absolute !important;
+        right: 4%;
+        bottom: 0%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+      /* testimonial */
+
+      #testimonial .owl-theme .owl-nav [class*=owl-]{
+        background-color: rgb(241, 239, 246) !important;
+        color: rgb(51, 4, 96) !important;
+        font-size: 25px !important;
+    } 
+
+    #testimonial .owl-theme .owl-nav .owl-next{
+        position: absolute !important;
+        right: 1%;
+        bottom: 0%;
+    }
+    #testimonial .owl-theme .owl-nav .owl-prev{
+        position: absolute !important;
+        right: 4%;
+        bottom: 0%;
+    }  
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    /* testimonial */
+
+    #testimonial .owl-theme .owl-nav [class*=owl-]{
+      background-color: rgb(241, 239, 246) !important;
+      color: rgb(51, 4, 96) !important;
+      font-size: 25px !important;
+  } 
+
+  #testimonial .owl-theme .owl-nav .owl-next{
+      position: absolute !important;
+      right: 1%;
+      bottom: 0%;
+  }
+  #testimonial .owl-theme .owl-nav .owl-prev{
+      position: absolute !important;
+      right: 4%;
+      bottom: 0%;
+  }  
+}
+
+@media screen and (min-width: 1400px){
+    /* testimonial */
+
+    #testimonial .owl-theme .owl-nav [class*=owl-]{
+      background-color: rgb(241, 239, 246) !important;
+      color: rgb(51, 4, 96) !important;
+      font-size: 25px !important;
+  } 
+
+  #testimonial .owl-theme .owl-nav .owl-next{
+      position: absolute !important;
+      right: 1%;
+      bottom: 0%;
+  }
+  #testimonial .owl-theme .owl-nav .owl-prev{
+      position: absolute !important;
+      right: 4%;
+      bottom: 0%;
+  }  
+}
+
+
+
+
+/* ----------------------------------home ---------------------------------------------------------------*/
+
+@media screen and (min-width: 1300px) { 
+    #home{
+        padding: 8px 10px 15px;
+    }
+    #home .head .photo_container{
+        height: 200px;
+    }
+    #home .head .photo{
+        height: 155px;
+        width: 155px;
+    }
+    #home .head img{
+        width: 97%;
+        height: 97%;
+    }
+    #home .head img:hover{
+        height: 100%;
+        width: 100%;
+    }
+    #home .head .photo_container p{
+        font-weight: 600;
+        padding: 0px;
+        margin: 0;
+        font-size: 20px;
+    }
+    #home .banner{
+        width: 100%;
+        height: auto;
+        padding: 10% 6%;
+    }
+    #home .banner .b_title h1{
+        font-size: 70px;
+        font-weight: 800;
+    }
+    #home .banner .b_title h3{
+        font-size: 50px;
+        font-weight: 600;
+    }
+    #home .banner .b_title .btn{
+        border-radius: 30px;
+        margin: 2px 0px;
+        padding: 8px 15px;
+        font-size: 20px;
+    }
+    #home .bottom {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+    #home .bottom p{
+        font-size: 22px;
+    }
+    #home .bottom .icons{
+        font-size: 35px;
+        margin: 5px 12px;
+    }
+    #home2 .aboutus .photo{
+        height: 350px;
+    }    
+    #home2 .aboutus .readm{
+        font-size: 20px;
+    }
+    #home2 .aboutus h2{
+        display: flex;
+        justify-content: center;
+    }
+    #home2 .aboutus p{
+        line-height: 30px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1185px) and (max-width: 1300px) { 
+    #home{
+        padding: 8px 10px 15px;
+    }
+    #home .head .photo_container{
+        height: 200px;
+    }
+    #home .head .photo{
+        height: 155px;
+        width: 155px;
+    }
+    #home .head img{
+        width: 97%;
+        height: 97%;
+    }
+    #home .head img:hover{
+        height: 100%;
+        width: 100%;
+    }
+    #home .head .photo_container p{
+        font-weight: 600;
+        padding: 0px;
+        margin: 0;
+        font-size: 20px;
+    }
+    #home .banner{
+        width: 100%;
+        height: auto;
+        padding: 10% 6%;
+    }
+    #home .banner .b_title h1{
+        font-size: 70px;
+        font-weight: 800;
+    }
+    #home .banner .b_title h3{
+        font-size: 50px;
+        font-weight: 600;
+    }
+    #home .banner .b_title .btn{
+        border-radius: 30px;
+        margin: 2px 0px;
+        padding: 8px 15px;
+        font-size: 20px;
+    }
+    #home .bottom {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+    #home .bottom p{
+        font-size: 22px;
+    }
+    #home .bottom .icons{
+        font-size: 35px;
+        margin: 5px 12px;
+    }
+    #home2 .aboutus .photo{
+        height: 300px;
+    }    
+    #home2 .aboutus .readm{
+        font-size: 20px;
+    }
+    #home2 .aboutus h2{
+        display: flex;
+        justify-content: center;
+    }
+    #home2 .aboutus p{
+        line-height: 30px;
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 999px) and (max-width: 1185px) { 
+    #home{
+        padding: 7px 10px 15px;
+    }
+    #home .head .photo_container{
+        height: 180px;
+    }
+    #home .head .photo{
+        height: 135px;
+        width: 135px;
+    }
+    #home .head img{
+        width: 97%;
+        height: 97%;
+    }
+    #home .head img:hover{
+        height: 100%;
+        width: 100%;
+    }
+    #home .head .photo_container p{
+        font-weight: 600;
+        padding: 0px;
+        margin: 0;
+        font-size: 20px;
+    }
+    #home .banner{
+        width: 100%;
+        height: auto;
+        padding: 10% 6%;
+    }
+    #home .banner .b_title h1{
+        font-size: 70px;
+        font-weight: 800;
+    }
+    #home .banner .b_title h3{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    #home .banner .b_title .btn{
+        border-radius: 30px;
+        margin: 2px 0px 10px;
+        padding: 7px 12px;
+        font-size: 20px;
+    }
+    #home .bottom {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+    #home .bottom p{
+        font-size: 22px;
+    }
+    #home .bottom .icons{
+        font-size: 33px;
+        margin: 5px 12px;
+    }
+    #home2 .aboutus .photo{
+        height: 300px;
+    }    
+    #home2 .aboutus .readm{
+        font-size: 20px;
+    }
+    #home2 .aboutus h2{
+        display: flex;
+        justify-content: center;
+    }
+    #home2 .aboutus p{
+        line-height: 28px;
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 795px) and (max-width: 999px) { 
+    #home{
+        padding: 6px 10px 15px;
+    }
+    #home .head .photo_container{
+        height: 160px;
+    }
+    #home .head .photo{
+        height: 120px;
+        width: 120px;
+    }
+    #home .head img{
+        width: 97%;
+        height: 97%;
+    }
+    #home .head img:hover{
+        height: 100%;
+        width: 100%;
+    }
+    #home .head .photo_container p{
+        font-weight: 400;
+        padding: 0px;
+        margin: 0;
+        font-size: 17px;
+    }
+    #home .banner{
+        width: 100%;
+        height: auto;
+        padding: 10% 6%;
+    }
+    #home .banner .b_title h1{
+        font-size: 45px;
+        font-weight: 800;
+    }
+    #home .banner .b_title h3{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    #home .banner .b_title .btn{
+        border-radius: 30px;
+        margin: 2px 0px 10px;
+        padding: 4px 7px;
+        font-size: 17px;
+    }
+    #home .bottom {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+    #home .bottom p{
+        font-size: 18px;
+    }
+    #home .bottom .icons{
+        font-size: 33px;
+        margin: 5px 12px;
+    }
+    #home2 .aboutus .photo{
+        height: 250px;
+    }    
+    #home2 .aboutus .readm{
+        font-size: 17px;
+    }
+    #home2 .aboutus h2{
+        display: flex;
+        justify-content: center;
+    }
+    #home2 .aboutus p{
+        font-size: 17px;
+        line-height: 25px;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 795px) { 
+    #home{
+        padding: 5px 10px 15px;
+    }
+    #home .head .photo_container{
+        height: 135px;
+    }
+    #home .head .photo{
+        height: 95px;
+        width: 95px;
+    }
+    #home .head img{
+        width: 97%;
+        height: 97%;
+    }
+    #home .head img:hover{
+        height: 100%;
+        width: 100%;
+    }
+    #home .head .photo_container p{
+        font-weight: 400;
+        padding: 0px;
+        margin: 0;
+        font-size: 17px;
+    }
+    #home .banner{
+        width: 100%;
+        height: auto;
+        padding: 10% 6%;
+    }
+    #home .banner .b_title h1{
+        font-size: 35px;
+        font-weight: 800;
+    }
+    #home .banner .b_title h3{
+        font-size: 23px;
+        font-weight: 600;
+    }
+    #home .banner .b_title .btn{
+        border-radius: 30px;
+        margin: 2px 0px;
+        padding: 4px 7px;
+        font-size: 17px;
+    }
+    #home .bottom {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-weight: 600;
+    }
+    #home .bottom p{
+        font-size: 18px;
+    }
+    #home .bottom .icons{
+        font-size: 30px;
+        margin: 5px 12px;
+    }
+    #home2 .aboutus .photo{
+        height: 300px;
+    }    
+    #home2 .aboutus .readm{
+        font-size: 17px;
+    }
+    #home2 .aboutus h2{
+        display: flex;
+        justify-content: center;
+    }
+    #home2 .aboutus p{
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
+
+
+
+
+
+
+
+/* animation */
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}

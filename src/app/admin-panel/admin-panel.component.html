@@ -1,0 +1,495 @@
+<div class="panel container-fluid" style="background-color: #f1eff6;">
+    <!-- nav bar -->
+        <div class="row adminNav" >
+            <div class="col-12 col-md-3 p-0">
+                <div class="p-2 py-4 d-none d-md-block text-md-center" style="background-color: #330460; border-radius: 0px 0px 20px 0px;box-shadow: rgb(51,4,96, 0.4) -4px 9px 25px -6px;"><h2 class="m-0 at" style="color: #f1eff6;">Admin Panel</h2></div>
+                <div class="container-fluid">
+                    <div class="row d-md-none py-3"  style="background-color: #330460;">
+                        <div class="col-6 ps-4 centerv"><h4 style="color: #f1eff6; margin: 0;" class="at">Admin Panel</h4></div>
+                        <div class="col-6">
+                            <div class="mynavbox float-end"><button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="--bs-btn-border-width:0" style="color: #f1eff6;"><i class="fa-solid fa-bars bar"></i></button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="background-color: #f1eff6;color: #330460;">
+                                    <div class="offcanvas-header">
+                                        <div id="offcanvasRightLabel"><img class="navlogo" src="assets/home_img/Queenfix.png" alt="logo" width="50%"></div>
+                                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                    </div>
+                                    <hr style="color: #330460;" class="m-0">
+                                    <div class="offcanvas-body list">
+                                        <div class="pt-3 asb"><a data-bs-dismiss="offcanvas" aria-label="Close" (click)="hom()">Home</a></div>
+                                        <div class="pt-3 asb"><a data-bs-dismiss="offcanvas" aria-label="Close" (click)="ord()">User Order Detail</a></div>
+                                        <div class="pt-3 asb"><a data-bs-dismiss="offcanvas" aria-label="Close" (click)="enq()">User Enquiry Details</a></div>
+                                        <div class="pt-3 asb"><a data-bs-dismiss="offcanvas" aria-label="Close" (click)="add()">Add Order</a></div>
+                                        <div class="pt-3 asb"><a data-bs-dismiss="offcanvas" aria-label="Close" (click)="con()">Conform Order</a></div>
+                                        <div class="text-center pt-5"><div class="btn  px-5 fv bs" routerLink="/admin-login">logout</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 d-none d-md-inline p-0" style="background-color: #f1eff6;">
+                <div class="p-2 py-4 text-end">
+                    <div class="btn  px-5 fv bs" routerLink="/admin-login">logout</div>
+                </div>
+            </div>
+        </div>
+        <!-- nav bar end-->
+
+    <!-- view content -->
+        <div class="row" style="min-height: 95vh;">
+            <div class="col-3 d-none d-md-block ps-2 ps-lg-5 py-3 py-lg-5 pe-0">
+                <!-- side bar -->
+                <div style="background-color: #f1eff6; color: #330460; position: sticky; top:135px;">
+                    <div class="mb-4 p-2 ps-3 homediv asb" style="background-color: white; border-radius: 30px 0px 0px 30px; box-shadow: rgb(51,4,96, 0.4) -4px 9px 25px -6px; transition: 500ms;" (click)="hom()">Home</div>
+                    <div class="mb-4 p-2 ps-3 userdiv asb" style="background-color: white; border-radius: 30px 30px 30px 30px; margin-right: 15px; box-shadow: rgb(51,4,96,0.4) -4px 9px 25px -6px; transition: 500ms;" (click)="user()">User Details</div>
+                    <div class="mb-4 p-2 ps-3 adddiv asb" style="background-color: white; border-radius: 30px 30px 30px 30px; margin-right: 15px; box-shadow: rgb(51,4,96,0.4) -4px 9px 25px -6px; transition: 500ms;" (click)="add()">Add Order</div>
+                    <div class="mb-4 p-2 ps-3 orddiv asb" style="background-color: white; border-radius: 30px 30px 30px 30px; margin-right: 15px; box-shadow: rgb(51,4,96,0.4) -4px 9px 25px -6px; transition: 500ms;" (click)="ord()">User Order Details</div>
+                    <div class="mb-4 p-2 ps-3 condiv asb"  style="background-color: white; border-radius: 30px 30px 30px 30px; margin-right: 15px; box-shadow: rgb(51,4,96,0.4) -4px 9px 25px -6px; transition: 500ms;" (click)="con()">Conform Order Details</div>
+                    <div class="mb-4 p-2 ps-3 enqdiv asb"  style="background-color: white; border-radius: 30px 30px 30px 30px; margin-right: 15px; box-shadow: rgb(51,4,96,0.4) -4px 9px 25px -6px; transition: 500ms;" (click)="enq()">User Enquiry Details</div>
+                </div>
+            </div>
+            <div class=" col-12 col-md-9 p-3 p-md-4 p-lg-5" style="background-color: white; border-radius: 20px 0px 0px 0px;">
+                <!-- home -->
+                <div *ngIf="home">
+                   <div class="row">
+                    <div class="col-12 col-sm-6 pb-2 pb-sm-3 pb-md-5">
+                        <div class="navcard text-center shadowcard" (click)="user()">
+                            <div class="d-block"><i class="fa-solid fa-user"></i></div>
+                            <h3 class="m-0 pt-4">User Details</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 pb-2 pb-sm-3 pb-md-5">
+                        <div class="navcard text-center shadowcard" (click)="ord()">
+                            <div class="d-block"><i class="fa-solid fa-box"></i></div>
+                            <h3 class="m-0 pt-4">User Order Details</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 pb-2 pb-sm-3 pb-md-5">
+                        <div class="navcard text-center shadowcard" (click)="enq()">
+                            <div><i class="fa-solid fa-person-circle-question"></i></div>
+                            <h3 class="m-0 pt-4">User Enquiry Details</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 pb-2 pb-sm-3 pb-md-5">
+                        <div class="navcard text-center shadowcard" (click)="add()">
+                            <div><i class="fa-regular fa-square-plus"></i></div>
+                            <h3 class="m-0 pt-4">Add Order Details</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 pb-2 pb-sm-3 pb-md-5">
+                        <div class="navcard text-center shadowcard" (click)="con()">
+                            <div><i class="fa-solid fa-clipboard-check"></i></div>
+                            <h3 class="m-0 pt-4">Conform Order</h3>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+                <!-- home end-->
+
+                <!-- enquiry table -->
+                <div *ngIf="etable" class="enquiry container-fluid">
+                    <!-- for web -->
+                    <div class="d-none d-md-block">
+                        <div class="head">
+                            <div class="row p-2 shadowb"  style="background-color: #330460; color: #f1eff6;">
+                                <div class="col-4 ft">Name</div>
+                                <div class="col-4 ft">E-Mail ID</div>
+                                <div class="col-4 ft">Feedback</div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div *ngFor="let enq of enquiry | async" class="pt-3">
+                                <div class="row p-2 shadowb" style="background-color: #f1eff6; color: #330460;">
+                                    <div style="display: inline; top: 10px; right: 10px; position: absolute;"><i class="fa-regular fa-ban" style=" color: #330460; font-size: 20px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="delete"></i></div>
+                                    <div class="col-4 fv">{{enq.name}}</div>
+                                    <div class="col-4 fv"><span (click)="sendEmail($event,enq)">{{enq.email}}</span></div>
+                                    <div class="col-4 fv" style="position: relative;">{{enq.message}}
+                                        <div style="display: inline; top: 0px; right: 10px; position: absolute;"><i class="fa-regular fa-ban" style=" color: #330460; font-size: 20px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="delete"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- for mobile -->
+                    <div class="content px-3 d-md-none">
+                        <div class="text-center pt-3"><h3 class="m-0" style="color: #330460;">User Enquiry Details</h3></div>
+                        <div *ngFor="let enq of enquiry | async" class="pt-3">
+                            <div class="row p-2 mt-3 shadowb" style="background-color: #f1eff6; color: #330460;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                <div class="col-12" style="position: relative;">
+                                    <div style="display: inline; top: 0px; right: 10px; position: absolute;"><i class="fa-regular fa-ban" style=" color: #330460; font-size: 20px;" (click)="deleteenquiry($event,enq)" data-bs-toggle="tooltip" data-bs-placement="bottom" title="delete"></i></div>
+                                    <div><span class="ft">Name : </span><span class="fv">{{enq.name}}</span></div>
+                                    <div><span class="ft">Message : </span><span class="fv" (click)="sendEmail($event,enq)">{{enq.email}}</span></div>
+                                    <div><span class="ft">Message : </span><span class="fv">{{enq.message}}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- enquiry table end-->
+
+                <!-- order table -->
+                <div *ngIf="otable" class="order container-fluid">
+                    <!-- for web -->
+                    <div class="content d-none d-md-block">
+                        <div *ngFor="let ord of order | async" class="pt-3">
+                            <div class="row p-2 shadowb" style="background-color: #f1eff6; color: #330460; border-radius: 10px;">
+                                <div class="col-6">
+                                    <div><h4 class="ft">Name :</h4><span class="fv"> {{ord.name}}</span></div>
+                                    <div><h4 class="ft">Mobile Number :</h4><span class="fv"> {{ord.phone_number}}</span></div>
+                                    <div><h4 class="ft">E-mail ID :</h4><span class="fv"> {{ord.email}}</span></div>
+                                </div>
+                                <div class="col-6" style=" position: relative;">
+                                    <div style="display: inline; top: 10px; right: 10px; position: absolute;">
+                                        <i class="fa-solid fa-pencil" style="color: #330460; font-size: 20px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit" (click)="editform($event,ord)"></i>
+                                        <i *ngIf="edit && orderToEdit.id==ord.id" class="fa-solid fa-down-left-and-up-right-to-center"  style="color: #330460; font-size: 20px;"  (click)="closeEditForm()"></i>
+                                    </div>                               
+                                    <div><h4 class="ft">Call Status :</h4><span class="fv"> {{ord.call}}</span></div>
+                                    <div><h4 class="ft">Model :</h4><span class="fv"> {{ord.model}}</span></div>
+                                    <div><h4 class="ft">Description :</h4><span class="fv"> {{ord.description}}</span></div>
+                                </div>
+                                <!-- order edit box -->
+                                <div *ngIf="edit && orderToEdit.id == ord.id" class="col-12">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="input-field py-2">
+                                                    <input type="text" placeholder="Add Name" class="form-control" [(ngModel)]="ord.name" name="name">
+                                                </div>
+                                                <div class="input-field py-2">
+                                                    <input type="text" placeholder="Add Email" class="form-control" [(ngModel)]="ord.email" name="email">
+                                                </div>
+                                                <div class="input-field py-2">
+                                                    <input type="text" placeholder="Add phone_number" class="form-control" [(ngModel)]="ord.phone_number" name="phone_number">
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 text-center py-2"><div class="btn fv bs" type="Submit" (click)="updateOrder(ord)">Update</div></div>
+                                                    <div class="col-6 text-center py-2"><div class="btn fv bs" type="Submit" (click)="conformOrder($event,ord)">Comform</div></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="input-field py-2">
+                                                    <input type="text" placeholder="Add call" class="form-control" [(ngModel)]="ord.call" name="call">
+                                                </div>
+                                                <div class="input-field py-2">
+                                                    <input type="text" placeholder="Add model" class="form-control" [(ngModel)]="ord.model" name="model">
+                                                </div>
+                                                <div class="input-field py-2">
+                                                    <input type="text" placeholder="Add description" class="form-control" [(ngModel)]="ord.description" name="description">
+                                                </div>
+                                                <div class="row">
+                                                    <div class=" col-6 text-center py-2"><div class="btn  fv bs" (click)="deleteorder($event,ord)">Delete</div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- order edit box end-->
+                            </div>
+                        </div>
+                    </div>
+                     <!-- for web end-->
+
+                    <!-- for mobile -->
+                    <div class="content px-3 d-md-none">
+                        <div class="text-center pt-3"><h3 class="m-0" style="color: #330460;">User Order Details</h3></div>
+                        <div *ngFor="let ord of order | async">
+                            <div class="row p-2 mt-4 shadowb " style="background-color: #f1eff6; color: #330460;">
+                                <div class="col-12" style="position: relative;">
+                                    <div style="display: inline; top: 10px; right: 10px; position: absolute;">
+                                        <i class="fa-solid fa-pencil" style="color: #330460; font-size: 20px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit" (click)="editform($event,ord)"></i>
+                                        <i *ngIf="edit && orderToEdit.id==ord.id" class="fa-solid fa-down-left-and-up-right-to-center"  style="color: #330460; font-size: 20px;"  (click)="closeEditForm()"></i>
+                                    </div> 
+                                    <div><h4 class="ft">Name :</h4><span class="fv"> {{ord.name}}</span></div>
+                                    <div><h4 class="ft">Mobile Number :</h4><span class="fv"> {{ord.phone_number}}</span></div>
+                                    <div><h4 class="ft">E-mail ID :</h4><span class="fv"> {{ord.email}}</span></div>
+                                    <div><h4 class="ft">Call Status :</h4><span class="fv"> {{ord.call}}</span></div>
+                                    <div><h4 class="ft">Model :</h4><span class="fv"> {{ord.model}}</span></div>
+                                    <div><h4 class="ft">Description :</h4><span class="fv"> {{ord.description}}</span></div>
+                                </div>
+                                <!-- order edit box -->
+                                <div *ngIf="edit && orderToEdit.id == ord.id" class="col-12">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6">
+                                                <div class="input-field py-2">
+                                                    <input type="text" placeholder="Add Name" class="form-control" [(ngModel)]="ord.name" name="name">
+                                                </div>
+                                                <div class="input-field py-2">
+                                                    <input type="text" placeholder="Add Email" class="form-control" [(ngModel)]="ord.email" name="email">
+                                                </div>
+                                                <div class="input-field py-2">
+                                                    <input type="text" placeholder="Add phone_number" class="form-control" [(ngModel)]="ord.phone_number" name="phone_number">
+                                                </div>
+                                                <div class="d-none d-sm-inline">
+                                                    <div class="row ">
+                                                        <div class="col-6 text-center py-2"><div class="btn fv bs" type="Submit" (click)="updateOrder(ord)">Update</div></div>
+                                                        <div class="col-6 text-center py-2"><div class="btn fv bs" type="Submit" (click)="conformOrder($event,ord)">Comform</div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <div class="input-field py-2">
+                                                    <input type="text" placeholder="Add call" class="form-control" [(ngModel)]="ord.call" name="call">
+                                                </div>
+                                                <div class="input-field py-2">
+                                                    <input type="text" placeholder="Add model" class="form-control" [(ngModel)]="ord.model" name="model">
+                                                </div>
+                                                <div class="input-field py-2">
+                                                    <input type="text" placeholder="Add description" class="form-control" [(ngModel)]="ord.description" name="description">
+                                                </div>
+                                                <div class="d-none d-sm-inline">
+                                                    <div class="row ">
+                                                        <div class=" col-6 text-center py-2"><div class="btn  fv bs" (click)="deleteorder($event,ord)">Delete</div></div>
+                                                    </div>
+                                                </div>
+                                                <div class="row d-sm-none">
+                                                    <div class="col-4 text-center py-2"><div class="btn fv bs" type="Submit" (click)="updateOrder(ord)">Update</div></div>
+                                                    <div class="col-4 text-center py-2"><div class="btn fv bs" type="Submit" (click)="conformOrder($event,ord)">Comform</div></div>
+                                                    <div class="col-4 text-center py-2"><div class="btn  fv bs" (click)="deleteorder($event,ord)">Delete</div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- order edit box end-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- for mobile end-->
+                </div>
+                <!-- order table end-->
+
+                <!-- add order -->
+                <div *ngIf="addOrder">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-sm-10 col-lg-8  wow fadeIn">
+                            <h1 class="text-center pb-4 m-0 ft" style="color: #330460;">
+                                Order Details
+                            </h1>
+                            <form>
+                                <div class="form-group pb-3">
+                                    <label for="name" class="pb-2">Name</label>
+                                    <input type="text" id="name" [formControl]="name" class="form-control p-2 px-sm-3" placeholder="Name" on-focusout="namecheck()" [(ngModel)]="user_order_details.name">
+                                </div>
+                                <div class="form-group pb-3">
+                                    <div class="row justify-content-between">
+                                        <label for="phno" class="pb-2">Mobile Number</label>
+                                        <div class="col-12">
+                                            <input type="text" id="phno" [formControl]="phno" class="form-control p-2 px-sm-3" placeholder="Mobile Number" on-focusout="phnocheck()"  (keydown)="numcheck($event)" [(ngModel)]="user_order_details.phone_number">
+                                            <div id="bot"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-6"><p class="m-0" style="text-decoration: underline;">Whould you like us to call you ?</p></div>
+                                    <div class="col-3 col-sm-2 centert"> <input  type="radio" id="call_yes" name="call" value="Yes" [formControl]="call" [(ngModel)]="user_order_details.call"><label class="px-1 para" style="color: black;">Yes</label></div>
+                                    <div class="col-3 col-sm-2 centert"><input type="radio" id="call_no" name="call" value="No" [formControl]="call" [(ngModel)]="user_order_details.call"><label class="px-1 para" style="color: black;">No</label></div>
+                                </div>
+                                <div class="form-group pb-3">
+                                    <label for="email" class="pb-2">Email</label>
+                                    <input type="email" id="email" [formControl]="email" class="form-control p-2 px-sm-3" placeholder="Email ID" on-focusout="emailcheck()" [(ngModel)]="user_order_details.email">
+                                </div>
+                                <div class="form-group pb-3">
+                                    <label for="model" class="pb-2">Model</label><br>
+                                    <select name="model" id="model" class="form-control p-2 px-sm-3" [formControl]="model" [(ngModel)]="user_order_details.model">
+                                        <!-- <option value="none"></option> -->
+                                        <option value="lehenga">Lehenga</option>
+                                        <option value="top">Top</option>
+                                        <option value="Skirt">Skirt</option>
+                                        <option value="jacket">Jacket</option>
+                                        <option value="trouser">Yrouser</option>
+                                        <option value="ready to wear saree">Ready To Wear Saree</option>
+                                        <option value="other type">Other Type</option>
+                                    </select>
+                                </div>
+                                <div class="form-group pb-3"> 
+                                    <label for="msg" class="pb-2">Descripton</label>                      
+                                    <textarea type="text" id="msg" [formControl]="msg"  class="form-control p-2 px-sm-3" placeholder="Message like dress design, dress size, feedback etc." aria-label="With textarea" on-focusout="msgcheck()" [(ngModel)]="user_order_details.description"></textarea>
+                                </div>  
+                                <div class="form-group text-center py-2">                
+                                    <button  class="btn send d-inline px-5 py-2 bs fv" style="border: 1px solid #330460;" (click)="Submit()">ORDER</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- add order end -->
+                
+                <!-- conform order -->
+                <div *ngIf="conOrder">
+                    <div class="order container-fluid">
+                        <!-- for web -->
+                        <div class="content d-none d-md-block">
+                            <div *ngFor="let con of conformOrd | async" class="pt-3">
+                                <div class="row p-2 shadowb " style="background-color: #f1eff6; color: #330460; border-radius: 10px;">
+                                    <div class="col-6">
+                                        <div><h4 class="ft">Name :</h4><span class="fv"> {{con.name}}</span></div>
+                                        <div><h4 class="ft">Mobile Number :</h4><span class="fv"> {{con.phone_number}}</span></div>
+                                        <div><h4 class="ft">E-mail ID :</h4><span class="fv"> {{con.email}}</span></div>
+                                    </div>
+                                    <div class="col-6" style=" position: relative;">
+                                        <div style="top: 10px; right: 10px; position: absolute; display: inline;">
+                                            <i class="fa-solid fa-pencil" style="color: #330460; font-size: 20px; " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit" (click)="editform($event,con)"></i>   
+                                            <i *ngIf="edit && orderToEdit.id==con.id" class="fa-solid fa-down-left-and-up-right-to-center"  style="color: #330460; font-size: 20px;"  (click)="closeEditForm()"></i>
+                                        </div>                            
+                                        <div><h4 class="ft">Call Status :</h4><span class="fv"> {{con.call}}</span></div>
+                                        <div><h4 class="ft">Model :</h4><span class="fv"> {{con.model}}</span></div>
+                                        <div><h4 class="ft">Description :</h4><span class="fv"> {{con.description}}</span></div>
+                                    </div>
+                                    <!-- con order edit box -->
+                                    <div *ngIf="edit && orderToEdit.id == con.id" class="col-12">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="input-field py-2">
+                                                        <input type="text" placeholder="Add Name" class="form-control" [(ngModel)]="con.name" name="name">
+                                                    </div>
+                                                    <div class="input-field py-2">
+                                                        <input type="text" placeholder="Add Email" class="form-control" [(ngModel)]="con.email" name="email">
+                                                    </div>
+                                                    <div class="input-field py-2">
+                                                        <input type="text" placeholder="Add phone_number" class="form-control" [(ngModel)]="con.phone_number" name="phone_number">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="input-field py-2">
+                                                        <input type="text" placeholder="Add call" class="form-control" [(ngModel)]="con.call" name="call">
+                                                    </div>
+                                                    <div class="input-field py-2">
+                                                        <input type="text" placeholder="Add model" class="form-control" [(ngModel)]="con.model" name="model">
+                                                    </div>
+                                                    <div class="input-field py-2">
+                                                        <input type="text" placeholder="Add description" class="form-control" [(ngModel)]="con.description" name="description">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="text-center py-2">
+                                                        <div class="btn fv bs" (click)="deleteConorder($event,con)">Delete</div>
+                                                        <div class="btn ms-5 fv bs" (click)="sendMsg($event,con)">Done</div>
+                                                        <div class="btn ms-5 fv bs" type="Submit" (click)="updateConOrder(con)">Update</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- order edit box end-->
+                                </div>
+                            </div>
+                        </div>
+                         <!-- for web end-->
+    
+                        <!-- for mobile -->
+                        <div class="content d-md-none">
+                            <div class="text-center pt-3"><h3 class="m-0" style="color: #330460;">Conform Order Details</h3></div>
+                            <div *ngFor="let con of conformOrd | async">
+                                <div class="row p-2 mt-4 shadowb " style="background-color: #f1eff6; color: #330460;">
+                                    <div class="col-12" style="position: relative;">
+                                        <div style="top: 5px; right: 5px; position: absolute; display: inline;">
+                                            <i class="fa-solid fa-pencil" style="color: #330460; font-size: 14px; " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit" (click)="editform($event,con)"></i>
+                                            <i *ngIf="edit && orderToEdit.id==con.id" class="fa-solid fa-down-left-and-up-right-to-center"  style="color: #330460; font-size: 14px;"  (click)="closeEditForm()"></i>
+                                        </div> 
+                                        <div><h4 class="ft" style="color: black;">Name :</h4><span class="fv"> {{con.name}}</span></div>
+                                        <div><h4 class="ft">Mobile Number :</h4><span class="fv"> {{con.phone_number}}</span></div>
+                                        <div><h4 class="ft">E-mail ID :</h4><span class="fv"> {{con.email}}</span></div>
+                                        <div><h4 class="ft">Call Status :</h4><span class="fv"> {{con.call}}</span></div>
+                                        <div><h4 class="ft">Model :</h4><span class="fv"> {{con.model}}</span></div>
+                                        <div><h4 class="ft">Description :</h4><span class="fv"> {{con.description}}</span></div>
+                                    </div>
+                                    <!-- con order edit box -->
+                                    <div *ngIf="edit && orderToEdit.id == con.id" class="col-12">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-6">
+                                                    <div class="input-field py-2">
+                                                        <input type="text" placeholder="Add Name" class="form-control" [(ngModel)]="con.name" name="name">
+                                                    </div>
+                                                    <div class="input-field py-2">
+                                                        <input type="text" placeholder="Add Email" class="form-control" [(ngModel)]="con.email" name="email">
+                                                    </div>
+                                                    <div class="input-field py-2">
+                                                        <input type="text" placeholder="Add phone_number" class="form-control" [(ngModel)]="con.phone_number" name="phone_number">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <div class="input-field py-2">
+                                                        <input type="text" placeholder="Add call" class="form-control" [(ngModel)]="con.call" name="call">
+                                                    </div>
+                                                    <div class="input-field py-2">
+                                                        <input type="text" placeholder="Add model" class="form-control" [(ngModel)]="con.model" name="model">
+                                                    </div>
+                                                    <div class="input-field py-2">
+                                                        <input type="text" placeholder="Add description" class="form-control" [(ngModel)]="con.description" name="description">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="text-center py-2">
+                                                        <div class="btn fv bs" (click)="deleteConorder($event,con)">Delete</div>
+                                                        <div class="btn ms-5 fv bs" (click)="sendMsg($event,con)">Done</div>
+                                                        <div class="btn ms-5 fv bs" type="Submit" (click)="updateConOrder(con)">Update</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!--con  order edit box end-->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- for mobile end-->
+                    </div>
+                </div>
+                <!-- conform order end -->
+
+                <!-- user Details -->
+                <div *ngIf="userDetails" class="container-fluid">
+                      <!-- Add User -->
+                    <div class="text-end pb-3 ">
+                        <i class="fa-regular fa-square-plus" style="color: #330460; font-size: 30px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add Product Type" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="text-start pb-3">
+                                        <label class="fv">User Name :</label>
+                                        <input type="text" class="form-control" [(ngModel)]="userIf.name" name="name">
+                                    </div>
+                                    <div class="text-start">
+                                        <label class="fv">Mobile Number:</label>
+                                        <input type="text" class="form-control" [(ngModel)]="userIf.phone_number" name="phno">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary fv" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary fv" data-bs-dismiss="modal" (click)="addUser(userIf)">Add</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add User End -->
+                    <div class="row p-2 shadowb" style="background-color: #330460; color: #f1eff6;">
+                        <div class="col-6 ft">Name</div>
+                        <div class="col-6 ft">Mobile Number</div>
+                    </div>
+                    <div *ngFor="let use of used | async">
+                        <div class="row p-2 shadowb mt-3"  style="background-color: #f1eff6; color: #330460;">
+                            <div class="col-6 fv">{{use.name}}</div>
+                            <div class="col-6 fv" style="position: relative;">{{use.phone_number}}
+                                <div style="display: inline; top: 0px; right: 10px; position: absolute;"><i class="fa-regular fa-ban" style=" color: #330460; font-size: 20px;" (click)="deleteuser($event,use)" data-bs-toggle="tooltip" data-bs-placement="bottom" title="delete"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- user Details End -->
+            </div>
+        </div>
+</div>
+
+

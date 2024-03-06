@@ -1,0 +1,264 @@
+#contact{
+    background-color: #f1eff6;
+}
+#contact .head {
+    color: #330460;
+    font-weight: 700;
+}
+#contact .s_head{
+    color: #330460;
+    margin: 0px !important;
+} 
+#contact .map{
+    border-radius: 10px;
+}
+#contact .map iframe{
+    border-radius: 10px;
+}
+#contact .chat{
+    background-color: #330460;
+    color: #f1eff6;
+    border-radius: 30px;
+}
+#contact .address, .phone, .email{
+    color: #330460;
+}
+
+
+
+@media screen and (min-width: 0px) and (max-width: 400px){
+    #contact{
+        padding: 10px 0px;
+    }
+    #contact .head{
+        font-size: 20px;
+    }
+    #contact .s_head{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    #contact .c{
+        padding: 0px 0px;
+    }
+    #contact .wicon{
+        padding: 5px;
+    }
+    #contact .c .icons{
+        font-size: 16px;
+    }
+    #contact .map{
+        height: 250px;
+    }
+    #contact .chat{
+        padding: 3px 5px;
+        font-size: 15px;
+        margin: 10px 0px;
+    }
+    #contact .address, .phone, .email{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 576px){
+    #contact{
+        padding: 10px 0px;
+    }
+    #contact .head{
+        font-size: 20px;
+    }
+    #contact .s_head{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    #contact .c{
+        padding: 1px 0px;
+    }
+    #contact .wicon{
+        padding: 5px;
+    }
+    #contact .c .icons{
+        font-size: 16px;
+    }
+    #contact .map{
+        height: 250px;
+    }
+    #contact .chat{
+        padding: 3px 5px;
+        font-size: 15px;
+        margin: 10px 0px;
+    }
+    #contact .address, .phone, .email{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    #contact{
+        padding: 10px 0px;
+    }
+    #contact .head{
+        font-size: 23px;
+    }
+    #contact .s_head{
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+    #contact .c{
+        padding: 2px 0px;
+    }
+    #contact .wicon{
+        padding: 5px;
+    }
+    #contact .c .icons{
+        font-size: 18px;
+    }
+    #contact .map{
+        height: 250px;
+    }
+    #contact .chat{
+        padding: 4px 7px;
+        font-size: 18px;
+        margin: 13px 0px;
+    }
+    #contact .address, .phone, .email{
+        font-size: 17px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    #contact{
+        padding: 10px 0px;
+    }
+    #contact .head{
+        font-size: 25px;
+    }
+    #contact .s_head{
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+    #contact .c{
+        padding: 3px 0px;
+    }
+    #contact .wicon{
+        padding: 5px;
+    }
+    #contact .c .icons{
+        font-size: 18px;
+    }
+    #contact .map{
+        height: 280px;
+    }
+    #contact .chat{
+        padding: 5px 9px;
+        font-size: 18px;
+        margin: 13px 0px;
+    }
+    #contact .address, .phone, .email{
+        font-size: 17px;
+    }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    #contact{
+        padding: 15px 0px;
+    }
+    #contact .head{
+        font-size: 27px;
+    }
+    #contact .s_head{
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    #contact .c{
+        padding: 5px 0px;
+    }
+    #contact .wicon{
+        padding: 5px;
+    }
+    #contact .c .icons{
+        font-size: 21px;
+    }
+    #contact .map{
+        height: 300px;
+    }
+    #contact .chat{
+        padding: 6px 10px;
+        font-size: 21px;
+        margin: 13px 0px;
+    }
+    #contact .address, .phone, .email{
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1400px){
+    #contact{
+        padding: 15px 0px;
+    }
+    #contact .head{
+        font-size: 27px;
+    }
+    #contact .s_head{
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    #contact .c{
+        padding: 5px 0px;
+    }
+    #contact .wicon{
+        padding: 5px;
+    }
+    #contact .c .icons{
+        font-size: 21px;
+    }
+    #contact .map{
+        height: 300px;
+    }
+    #contact .chat{
+        padding: 6px 10px;
+        font-size: 21px;
+        margin: 13px 0px;
+    }
+    #contact .address, .phone, .email{
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (min-width: 1400px){
+    #contact{
+        padding: 15px 0px;
+    }
+    #contact .head{
+        font-size: 27px;
+    }
+    #contact .s_head{
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    #contact .c{
+        padding: 5px 0px;
+    }
+    #contact .wicon{
+        padding: 5px;
+    }
+    #contact .c .icons{
+        font-size: 21px;
+    }
+    #contact .map{
+        height: 300px;
+    }
+    #contact .chat{
+        padding: 6px 10px;
+        font-size: 21px;
+        margin: 13px 0px;
+    }
+    #contact .address, .phone, .email{
+        font-size: 20px;
+    }
+}

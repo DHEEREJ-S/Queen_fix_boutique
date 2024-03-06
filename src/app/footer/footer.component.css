@@ -1,0 +1,166 @@
+/* footer */
+#default footer .para{
+    color: #330460;
+}
+#default .navi a{
+    margin: auto;
+}
+#default .f_head{
+    height: 61px;
+    color: rgb(51, 4, 96);
+}
+#default .f_link a{
+    text-decoration: none;
+    color: rgb(51, 4, 96);
+}
+#default .f_link a:hover{
+    color: rgb(223, 196, 59);
+    transition: 500ms;
+}
+#default .f_link{
+    margin-bottom: 7px;
+}
+#default footer .map{
+    height: 200px;
+}
+#default footer .btn{
+    border-color: rgb(51, 4, 96);
+    color: rgb(51, 4, 96);
+}
+#default footer .btn:hover{
+    background-color: rgb(51, 4, 96);
+    color: rgb(241, 239, 246);
+    transition: 300ms;
+}
+#default footer input, textarea{
+    border-color: rgb(51, 4, 96);
+    color: rgb(51, 4, 96);
+}
+#default .rights{
+    height: 25px;
+    color: rgb(241, 239, 246);
+    background-color: rgb(51, 4, 96);
+    font-size: 12px;
+}
+#default footer .form-group .red{
+        color: red;
+        font-size: 12px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+    /* footer */
+    #default .f_head{
+        height: 40px;
+    }
+    #default .f_link{
+        margin-bottom: 5px;
+    }
+    #default footer h3{
+        font-size: 20px;
+    }
+    #default footer .para, a{
+        font-size: 14px;
+    }
+ }
+
+
+ @media screen and (min-width: 400px) and (max-width: 576px) {
+    /* footer */
+    #default .f_head{
+        height: 40px;
+    }
+    #default .f_link{
+        margin-bottom: 5px;
+    }
+    #default footer h3{
+        font-size: 21px;
+    }
+    #default footer .para, a{
+        font-size: 14px;
+    }
+ }
+
+
+ @media screen and (min-width: 576px) and (max-width: 768px) {
+    /* footer */
+    #default .f_head{
+        height: 40px;
+    }
+    #default .f_link{
+        margin-bottom: 5px;
+    }
+    #default footer h3{
+        font-size: 24px;
+    }
+    #default footer .para, a{
+        font-size: 16px;
+    }
+ }
+
+
+ @media screen and (min-width: 768px) and (max-width: 992px){
+    /* footer */
+    #default .f_head{
+        height: 40px;
+    }
+    #default .f_link{
+        margin-bottom: 5px;
+    }
+    #default footer h3{
+        font-size: 24px;
+    }
+    #default footer .para{
+        line-height: 18px;
+    }
+    #default footer .para, a{
+        font-size: 14px;
+    }
+ }
+
+ @media screen and (min-width: 992px) and (max-width: 1200px){
+    /* footer */
+    #default .f_head{
+        height: 50px;
+    }
+    #default .f_link{
+        margin-bottom: 5px;
+    }
+    #default footer h3{
+        font-size: 27px;
+    }
+    #default footer .para, a{
+        font-size: 18px;
+    }
+ }
+
+ @media screen and (min-width: 1200px) and (max-width: 1400px){
+    /* footer */
+    #default .f_head{
+        height: 60px;
+    }
+    #default .f_link{
+        margin-bottom: 6px;
+    }
+    #default footer h3{
+        font-size: 27px;
+    }
+    #default footer .para, a{
+        font-size: 18px;
+    }
+ }
+
+ @media screen and (min-width: 1400px){
+    /* footer */
+    #default .f_head{
+        height: 40px;
+    }
+    #default .f_link{
+        margin-bottom: 5px;
+    }
+    #default footer h3{
+        font-size: 27px;
+    }
+    #default footer .para, a{
+        font-size: 18px;
+    }
+ }

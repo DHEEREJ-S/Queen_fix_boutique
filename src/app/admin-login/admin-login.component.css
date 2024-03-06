@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.bt{
+    color: #f1eff6;
+    background-color: #330460;
+}
+.bt:hover{
+    color: #e7d83b;
+}
+.ft{
+    font-family: Nunito Sans;
+    font-size: 20px;
+}
+.st{
+    font-family: Nunito Sans;
+    font-size: 15px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px){
+    .ft{
+        font-size: 14px;
+    }
+    .st{
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 576px){
+    .ft{
+        font-size: 15px;
+    }
+    .st{
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .ft{
+        font-size: 16px;
+    }
+    .st{
+        font-size: 11px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .ft{
+        font-size: 18px;
+    }
+    .st{
+        font-size: 12px;
+    }
+   
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    .ft{
+        font-size: 19px;
+    }
+    .st{
+        font-size: 13px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1400px){
+    .ft{
+        font-size: 20px;
+    }
+    .st{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (min-width: 1400px){
+    .ft{
+        font-size: 22px;
+    }
+    .st{
+        font-size: 15px;
+    }
+}

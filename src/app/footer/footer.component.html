@@ -1,0 +1,52 @@
+<div id="default">
+    <footer>
+        <div class="container-fluid mt-md-3">
+            <div class="row p-2">
+                <div class="mb-2 mb-xl-0 col-12 col-sm-6 col-md-3 wow fadeIn">
+                    <div class="centerh"><img class="mb-3" src="assets/home_img/Queenfix.png" alt="logo" height="45px"></div>
+                    <p class="para" style="text-align: justify;">At Queen Fix Women's Tailoring Shop, we believe that fashion 
+                        is an expression of individuality, and we are 
+                        here to tailor that expression to perfection. With a rich history rooted in craftsmanship 
+                        and a commitment to delivering impeccable quality, we have become a trusted name in the world 
+                        of bespoke tailoring.</p>
+                </div>
+
+                <div class="mb-2 mb-xl-0 col-12 col-sm-6 col-md-3 wow fadeIn">
+                    <div class="centerh f_head"><h3>Our links</h3></div>
+                    <div class="f_link centerh "><a [routerLink]="['']">Home</a></div>
+                    <div class="f_link centerh "><a [routerLink]="['service']">Service</a></div>
+                    <div class="f_link centerh "><a [routerLink]="['gallery']">Gallery</a></div>
+                    <div class="f_link centerh "> <a [routerLink]="['aboutus']">Order</a></div>
+                    <div class="f_link centerh "> <a [routerLink]="['aboutus']">About us</a></div>
+                    <div class="f_link  centerh mb-2 mb-md-0"><a [routerLink]="['contact']">Contact</a></div>
+                </div>
+                <div class="mb-2 mb-xl-0 col-12 col-sm-6 col-md-3 wow fadeIn">
+                    <div class="centerh f_head"><h3>Our Location</h3></div>
+                    <div class="map mb-3 mx-1 centerh">
+                        <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d982.5116183472724!2d78.09506770857175!3d9.930087772142821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cf68e37e535d%3A0x3e168f27ce9e51bf!2sKalavasal%20Bridge!5e0!3m2!1sen!2sin!4v1704714437104!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="mb-2 mb-md-0 centerh">
+                    </div>
+                </div>
+                <div class="mb-2 mb-xl-0 col-12 col-sm-6 col-md-3 wow fadeIn">
+                    <div class="centerh f_head"><h3>Get In Touch</h3></div>
+                    <form>
+                        <div class="form-group mb-3">
+                            <input type="text" [formControl]="name" class="form-control" placeholder="Name" on-focusout="namecheck()" [(ngModel)]="user_enquiry_details.name">
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="email" [formControl]="email" class="form-control" placeholder="Email" on-focusout="emailcheck()" [(ngModel)]="user_enquiry_details.email">
+                        </div>
+                        <div class="form-group mb-3">                       
+                            <textarea type="text" class="form-control" [formControl]="msg"  placeholder="Message" aria-label="With textarea" on-focusout="msgcheck()" [(ngModel)]="user_enquiry_details.message"></textarea>
+                        </div>  
+                        <div class="form-group">                
+                            <div class="btn d-inline mb-3" style="border-radius: 20px;" (click)="Submit()">Submit</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="rights centert">© 2024 SDJtech Pvt. Ltd. All Rights Reserved</div>
+</div>

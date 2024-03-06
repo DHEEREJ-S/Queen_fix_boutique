@@ -1,0 +1,67 @@
+<section id="order">
+    <div class="container-fliud p-3 p-sm-5" style="background-color:#f1eff6; color: #330460;">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-9 col-lg-6  wow fadeIn">
+                <h1 class="text-center pb-4 m-0">
+                    Order Details
+                </h1>
+                <form>
+                    <div class="form-group pb-3">
+                        <label for="name" class="pb-2">Name</label>
+                        <input type="text" id="name" [formControl]="name" class="form-control p-2 px-sm-3" placeholder="Name" on-focusout="namecheck()" [(ngModel)]="user_order_details.name">
+                    </div>
+                    <div class="form-group pb-3">
+                        <div class="row justify-content-between">
+                            <label for="phno" class="pb-2">Mobile Number</label>
+                            <div class="col-8">
+                                <input type="text" id="phno" [formControl]="phno" class="form-control p-2 px-sm-3" placeholder="Mobile Number" on-focusout="phnocheck()"  (keydown)="numcheck($event)" [(ngModel)]="user_order_details.phone_number">
+                                <div id="bot"></div>
+                            </div>
+                            <div class="col-4 text-end">
+                                <div class="btn btn-success px-3 px-md-5 py-2" (click)="sendotp()">Verify</div>
+                            </div>
+                        </div>
+                        <!-- otp -->
+
+                        <div *ngIf="otpvisible">
+                            <div class="row justify-content-center">
+                                <div class="col py-5 text-center">
+                                        <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="otpstyle"></ng-otp-input>
+                                        <div class="pt-4 text-center"><div class="btn btn-success" (click)="handleClick()">Verifiy OTP</div></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  -->
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-6"><p class="m-0" style="text-decoration: underline;">Whould you like us to call you ?</p></div>
+                        <div class="col-3 col-sm-2 centert"> <input  type="radio" id="call_yes" name="call" value="Yes" [formControl]="call" [(ngModel)]="user_order_details.call"><label class="px-1 para" style="color: black;">Yes</label></div>
+                        <div class="col-3 col-sm-2 centert"><input type="radio" id="call_no" name="call" value="No" [formControl]="call" [(ngModel)]="user_order_details.call"><label class="px-1 para" style="color: black;">No</label></div>
+                    </div>
+                    <div class="form-group pb-3">
+                        <label for="email" class="pb-2">Email</label>
+                        <input type="email" id="email" [formControl]="email" class="form-control p-2 px-sm-3" placeholder="Email ID" on-focusout="emailcheck()" [(ngModel)]="user_order_details.email">
+                    </div>
+                    <div class="form-group pb-3">
+                        <label for="model" class="pb-2">Model (multi select available)</label><br>
+                        <ng-select id="model" [items]="models" bindLabel="name" bindValue="name"
+                        [multiple]="true"
+                        [closeOnSelect]="false"
+                        placeholder="Choose Model"
+                        style="background-color: white; border: 1px #330460 solid; border-radius: 5px; z-index: 50;"
+                        [formControl]="model" [(ngModel)]="user_order_details.model"></ng-select>
+                       
+                    </div>
+                    <div class="form-group pb-3"> 
+                        <label for="msg" class="pb-2">Descripton</label>                      
+                        <textarea type="text" id="msg" [formControl]="msg"  class="form-control p-2 px-sm-3" placeholder="Message like dress design, dress size, feedback etc." aria-label="With textarea" on-focusout="msgcheck()" [(ngModel)]="user_order_details.description"></textarea>
+                    </div>  
+                    <div class="form-group text-center py-2">                
+                        <button  class="btn send d-inline px-5 py-2" style="border: 1px solid #330460;" (click)="Submit()">ORDER</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

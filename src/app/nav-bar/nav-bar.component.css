@@ -1,0 +1,171 @@
+#default{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: white;
+}
+#default .mynav .logo{
+    height: 60px;
+}
+#default .r_link a{
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(51, 4, 96);
+}
+#default .active{
+    border-bottom: 1.5px solid rgb(223, 196, 59);
+    transition: 100ms;
+}
+#default .mynav .icons{
+    font-size: 25px;
+    color: rgb(51, 4, 96);
+}
+#default .mynav .icons:hover{
+    color: #dfc43b;
+    transition: 300ms;
+}
+#default .mynavbox .navbtn i{
+    color: #330460;
+}
+#default .mynavbox a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #330460;
+}
+#default .mynavbox a:hover{
+    color: #dfc43b;
+    transition: 200ms;
+}
+#default .mynavbox .icons{
+    font-size: 25px;
+    color: rgb(51, 4, 96);
+    padding: 0px 10px;
+}
+#default .mynavbox .icons:hover{
+    color: #dfc43b;
+    transition: 300ms;
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+    #default .mynav .logo{
+        height: 50px;
+    }
+    #default .mynavbox .navbtn i{
+        font-size: 22px;
+    }
+    #default .mynavbox .navlogo{
+        height: 50px;
+    }
+    #default .mynavbox a{
+        padding: 7px 0px;
+    }
+    #default .mynavbox .offcanvas{
+        width: 200px !important;
+    }
+    #default .mynavbox .modal-backdrop{
+        right: 199px !important;
+        left: auto !important;
+    }
+ }
+
+
+ @media screen and (min-width: 400px) and (max-width: 576px) {
+    #default .mynav .logo{
+        height: 50px;
+    }
+    #default .mynavbox .navbtn i{
+        font-size: 25px;
+    }
+    #default .mynavbox .navlogo{
+        height: 50px;
+    }
+    #default .mynavbox a{
+        padding: 8px 0px;
+    }
+    #default .mynavbox .offcanvas{
+        width: 250px !important;
+    }
+    #default .mynavbox .modal-backdrop{
+        right: 249px !important;
+        left: auto !important;
+    }
+ }
+
+
+ @media screen and (min-width: 576px) and (max-width: 768px) {
+    #default .mynav .logo{
+        height: 60px;
+    }
+    #default .mynavbox .navbtn i{
+        font-size: 28px;
+    }
+    #default .mynavbox .navlogo{
+        height: 60px;
+    }
+    #default .mynavbox a{
+        padding: 7px 0px;
+    }
+    #default .mynavbox .offcanvas{
+        width: 270px !important;
+    }
+    #default .mynavbox .modal-backdrop{
+        right: 269px !important;
+        left: auto !important;
+    }
+ }
+
+
+ @media screen and (min-width: 768px) and (max-width: 992px){
+    #default .mynav .logo{
+        height: 70px;
+    }
+    #default .mynavbox .navbtn i{
+        font-size: 30px;
+    }
+    #default .mynavbox .navlogo{
+        height: 70px;
+    }
+    #default .mynavbox a{
+        padding: 7px 0px;
+    }
+    #default .mynavbox .offcanvas{
+        width: 300px !important;
+    }
+    .modal-backdrop{
+        position: absolute;
+        right: 299px !important;
+        left: auto !important;
+    }
+ }
+
+ @media screen and (min-width: 992px) and (max-width: 1200px){
+    #default .mynav .logo{
+        height: 70px;
+    }
+    #default .r_link a{
+        font-size: 17px;
+    }
+ }
+
+ @media screen and (min-width: 1200px) and (max-width: 1400px){
+    #default .mynav .logo{
+        height: 70px;
+    }
+ }
+
+ @media screen and (min-width: 1400px){
+    #default .mynav .logo{
+        height: 70px;
+    }
+    #default .mynavbox .navlogo{
+        height: 70px;
+    }
+    #default .mynavbox a{
+        padding: 7px 0px;
+    }
+    #default .mynavbox .icons:hover{
+        font-size: 30px;
+    }
+ }
