@@ -101,11 +101,10 @@
                         <div class="content">
                             <div *ngFor="let enq of enquiry | async" class="pt-3">
                                 <div class="row p-2 shadowb" style="background-color: #f1eff6; color: #330460;">
-                                    <div style="display: inline; top: 10px; right: 10px; position: absolute;"><i class="fa-regular fa-ban" style=" color: #330460; font-size: 20px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="delete"></i></div>
                                     <div class="col-4 fv">{{enq.name}}</div>
                                     <div class="col-4 fv"><span (click)="sendEmail($event,enq)">{{enq.email}}</span></div>
                                     <div class="col-4 fv" style="position: relative;">{{enq.message}}
-                                        <div style="display: inline; top: 0px; right: 10px; position: absolute;"><i class="fa-regular fa-ban" style=" color: #330460; font-size: 20px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="delete"></i></div>
+                                        <div style="display: inline; top: 0px; right: 10px; position: absolute;"><i class="fa-regular fa-ban" style=" color: #330460; font-size: 20px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="delete" (click)="deleteenquiry($event,enq)"></i></div>
                                     </div>
                                 </div>
                             </div>

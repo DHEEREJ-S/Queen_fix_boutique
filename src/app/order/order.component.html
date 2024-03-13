@@ -44,18 +44,99 @@
                         <input type="email" id="email" [formControl]="email" class="form-control p-2 px-sm-3" placeholder="Email ID" on-focusout="emailcheck()" [(ngModel)]="user_order_details.email">
                     </div>
                     <div class="form-group pb-3">
-                        <label for="model" class="pb-2">Model (multi select available)</label><br>
-                        <ng-select id="model" [items]="models" bindLabel="name" bindValue="name"
+                        <label for="model" class="pb-2">Model</label><br>
+                        <select name="model" id="model" class="form-control p-2 px-sm-3" [formControl]="model" [(ngModel)]="user_order_details.model" (click)="modelS()">
+                            <option value="Top">Top</option>
+                            <option value="Blouse">Blouse</option>
+                            <option value="Skirt">Skirt</option>
+                            <option value="Lehenga">Lehenga</option>
+                            <option value="Other Type">Other Type</option>
+
+                          </select>
+                        <!-- <ng-select id="model" [items]="models" bindLabel="name" bindValue="name"
                         [multiple]="true"
                         [closeOnSelect]="false"
                         placeholder="Choose Model"
                         style="background-color: white; border: 1px #330460 solid; border-radius: 5px; z-index: 50;"
-                        [formControl]="model" [(ngModel)]="user_order_details.model"></ng-select>
-                       
+                        [formControl]="model" [(ngModel)]="user_order_details.model"></ng-select> -->
+                    </div>
+                    <div>
+                        <div class="" *ngIf="user_order_details.model=='Top' && modelShow==true">
+                            <div class="owl_slides px-3">
+                                <owl-carousel-o [options]="customOptions">
+                                        <ng-template carouselSlide><div class="gcard"><img src="https://cdn.shopify.com/s/files/1/0319/8510/7083/files/4_6d25d9fa-26de-4f41-95b0-be84d9bdc722_480x480.png?v=1653977897" alt="Off-Shoulder Top" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); offShoulderTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Off Shoulder Top"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="https://cdn.shopify.com/s/files/1/0319/8510/7083/files/12_47702071-e60a-4075-b962-d67265236ff8_480x480.png?v=1653978445" alt="Kaftan Top" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); KaftanTops();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Kaftan Top"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="https://cdn.shopify.com/s/files/1/0319/8510/7083/files/9_c718e457-37bc-4f22-8da0-3dc366eee539_480x480.png?v=1653978120" alt="Crop Top" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); cropTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Crop Top"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="https://cdn.shopify.com/s/files/1/0319/8510/7083/files/5_06e941df-652b-4b5c-b6cc-36f32e78d852_480x480.png?v=1653977973" alt="Cross-Over Top" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); crossOverTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Cross Over Top"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="https://www.hiscraves.com/blog/wp-content/uploads/2023/10/Shirt-Style-Top.png" alt="Shirt Style Top" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); ShirtStyleTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shirt Style Top"></div></ng-template>  
+                                        <ng-template carouselSlide><div class="gcard"><img src="https://www.hiscraves.com/blog/wp-content/uploads/2023/10/One-shoulder-Top-1152x1536.webp" alt="One Shoulder Top" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); OneShoulderTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="One Shoulder Top"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="https://www.hiscraves.com/blog/wp-content/uploads/2023/10/Cinched-Waist-Top.png" alt="Cinched Waist Top" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); CinchedWaistTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Cinchd Waist Top"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="https://www.hiscraves.com/blog/wp-content/uploads/2023/10/Maxi-Top.webp" alt="Maxi Top" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); maxiTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Maxi Top"></div></ng-template> 
+                                </owl-carousel-o>
+                            </div>
+                        </div>
+                        <div class="" *ngIf="user_order_details.model=='Skirt' && modelShow==true">
+                            <div class="owl_slides px-3">
+                                <owl-carousel-o [options]="customOptions">
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); offShoulderTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); KaftanTops();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); cropTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); crossOverTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); ShirtStyleTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template>  
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); OneShoulderTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); CinchedWaistTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); maxiTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template> 
+                                </owl-carousel-o>
+                            </div>
+                        </div>
+                        <div class="" *ngIf="user_order_details.model=='Lehenga' && modelShow==true">
+                            <div class="owl_slides px-3">
+                                <owl-carousel-o [options]="customOptions">
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); offShoulderTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); KaftanTops();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); cropTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); crossOverTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); ShirtStyleTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template>  
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); OneShoulderTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); CinchedWaistTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); maxiTop();" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></div></ng-template> 
+                                </owl-carousel-o>
+                            </div>
+                        </div>
+                        <div class="" *ngIf="user_order_details.model=='Blouse' && modelShow==true">
+                            <div class="owl_slides px-3">
+                                <owl-carousel-o [options]="customOptions">
+                                        <ng-template carouselSlide><div class="gcard"><img src="/assets/blouse_img/prience_cut.png" alt="Princess Cut Blouse" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); PrincessCutBlouse();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Princess Cut Blouse"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="/assets/blouse_img/sleeveless.png" alt="Sleeveless Blouse" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); SleevelessBlouse();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sleeveless Blouse"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="/assets/blouse_img/drated.png" alt="Darted Blouse" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); DartedBlouse();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Darted Blouse"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="/assets/blouse_img/embroidery.png" alt="Embroidery Blouse" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); EmbroideryBlouse();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Pattern Blouse"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="/assets/blouse_img/pattern.png" alt="Pattern Blouse" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); PatternBlouse();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Pattern Blouse"></div></ng-template>
+                                </owl-carousel-o>
+                            </div>
+                        </div>
+                        <div class="" *ngIf="user_order_details.model=='Other Type' && modelShow==true">
+                            <div class="owl_slides px-3">
+                                <owl-carousel-o [options]="customOptions">
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="Jacket" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); Jacket();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jacket"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="Ready To Wear Saree" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); RTWS();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ready To Wear Saree"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="Churidar" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); Churidar();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Churidar"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="Shirt" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); Shirt();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shirt"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="Trouser" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); Trouser();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trouser"></div></ng-template>  
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="Salwar" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); Salwar();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Salwar"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="Jump Suit" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); JumpSuit();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="JumpSuit"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="Kurti" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); Kurti();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Kurti"></div></ng-template> 
+                                        <ng-template carouselSlide><div class="gcard"><img src="" alt="Others" width="100%" height="100%" style="border-radius: 10px;" (click)="modelSC(); Others();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Other"></div></ng-template> 
+                                </owl-carousel-o>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group pb-3"> 
                         <label for="msg" class="pb-2">Descripton</label>                      
                         <textarea type="text" id="msg" [formControl]="msg"  class="form-control p-2 px-sm-3" placeholder="Message like dress design, dress size, feedback etc." aria-label="With textarea" on-focusout="msgcheck()" [(ngModel)]="user_order_details.description"></textarea>
+                    </div>
+                    <div class="form-group pb-3">
+                        <label for="" class="pb-2">Advance Payment :</label>
+                        <div><div #paypalRef></div></div>
                     </div>  
                     <div class="form-group text-center py-2">                
                         <button  class="btn send d-inline px-5 py-2" style="border: 1px solid #330460;" (click)="Submit()">ORDER</button>

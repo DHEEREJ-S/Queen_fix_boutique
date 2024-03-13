@@ -53,7 +53,12 @@
     box-shadow: none !important;
     border-color: rgb(51, 4, 96) !important;
 }
+  
 
+/* payment */
+.paypal-button-tagline .paypal-button-text{
+    display: none !important;
+}
 
 
 /* testimonial */

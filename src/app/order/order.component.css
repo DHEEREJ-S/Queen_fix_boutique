@@ -2,6 +2,13 @@
     background-color: #330460;
     color: #f1eff6;
 }
+.gcard{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border: 1px solid #330460;
+    border-radius: 10px;
+}
 /* #order .potion:hover{
     background-color: #330460 !important;
     color: #f1eff6 !important;

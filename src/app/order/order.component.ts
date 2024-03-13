@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -6,6 +6,7 @@ import firebase from 'firebase/compat/app';
 import "firebase/auth"
 import "firebase/firestore"
 import { DataService } from '../firebase/service/data.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 var firebaseConfig = {
   apiKey: "AIzaSyB9a9j18m45XyJo41pKJ9TxwjE4luo0Vuo",
@@ -31,18 +32,55 @@ export class OrderComponent  implements OnInit{
   model=new FormControl('', [Validators.required])
   call=new FormControl ('', [Validators.required])
   
-
+  amount=0;
+  paymentStatus=false;
+  transactionId="";
+  @ViewChild('paypalRef',{static:true}) paymentRef!:ElementRef;
 
   constructor(private toastr: ToastrService,private router:Router, private data:DataService) {}
 
   ngOnInit(){
     firebase.initializeApp(firebaseConfig)
+
+    this.amount=1.21;
+    window.paypal.Buttons(
+      {style:{
+        layout:'horizontal',
+        color: 'blue',
+        shape:'rect',
+        label: 'paypal',
+      },createOrder:(data:any,action:any)=>{
+        return action.order.create({
+          purchase_units:[
+            {
+              amount:{
+                value:this.amount.toString(),
+                currency_code:'USD'
+              }
+            }
+          ]
+        })
+      },
+      onApprove:(data:any,action:any)=>{
+        return action.order.capture().then((details:any)=>{
+          if(details.status==='COMPLETED'){
+            this.paymentStatus=true;
+            this.transactionId=details.id;
+            this.paymentTrue();
+          }
+        });
+      },
+      onError:(error:any)=>{
+        this.paymentFalse();
+      }    
+    }
+    ).render(this.paymentRef.nativeElement);
   }
   
   //order submit
   Submit() {
     if(this.name.valid && this.email.valid && this.msg.valid && this.model.valid && this.phno.valid && this.call.valid) {
-      if(this.otpverify==true){
+      if(this.otpverify==true && this.paymentStatus==true){
         this.showSuccess()
         this.data.add_order_Item(this.user_order_details);
         this.user_order_details.name='';
@@ -52,8 +90,15 @@ export class OrderComponent  implements OnInit{
         this.user_order_details.model='';
         this.user_order_details.phone_number='';
       }
+      else if(this.otpverify==false && this.paymentStatus==false){
+        this.verifyBoth()
+      }
       else{
-        this.verifynumr()
+        if(this.otpverify==true){
+          this.verifyPayment()
+        }else{
+          this.verifynumr()
+        }
       }
       
     } 
@@ -106,39 +151,23 @@ export class OrderComponent  implements OnInit{
 
 
   //toastr setup
-  showSuccess(){
-    this.toastr.success('Successfully Send','Details')
-  }
-  showError(){
-    this.toastr.error('Fill the details properly','Details')
-  }
-  namer(){
-    this.toastr.error('Name is requried','Details')
-  }
-  namel(){
-    this.toastr.error('Minimum 3 Character is Required','Name')
-  }
-  phnor(){
-    this.toastr.error('Mobile Number is requried','Details')
-  }
-  verifynumr(){
-    this.toastr.error('Check mobile number is verify or not','Details')
-  }
-  phnol(){
-    this.toastr.error('Mobile Number should be in 10 digits','Mobile Number')
-  }
-  emailr(){
-    this.toastr.error('Email ID is requried','Details')
-  }
-  emailp(){
-    this.toastr.error('Enter Email id properly','Email')
-  }
-  msgr(){
-    this.toastr.error('Message is requried','Details')
-  }
-  otpr(){
-    this.toastr.error('Name & Mobile Number are requried','Details')
-  }
+  showSuccess(){this.toastr.success('Successfully Send','Details')}
+  showError(){this.toastr.error('Fill the details properly','Details')}
+  namer(){this.toastr.error('Name is requried','Details')}
+  namel(){this.toastr.error('Minimum 3 Character is Required','Name')}
+  phnor(){this.toastr.error('Mobile Number is requried','Details')}
+  verifynumr(){this.toastr.error('Check mobile number is verify or not','Details')}
+  phnol(){this.toastr.error('Mobile Number should be in 10 digits','Mobile Number')}
+  emailr(){this.toastr.error('Email ID is requried','Details')}
+  emailp(){this.toastr.error('Enter Email id properly','Email')}
+  msgr(){this.toastr.error('Message is requried','Details')}
+  otpr(){this.toastr.error('Name & Mobile Number are requried','Details')}
+  paymentTrue(){this.toastr.success('Transaction ID : '+this.transactionId,'Transaction Details :')}
+  paymentFalse(){this.toastr.error('Transaction cancel','Transaction Details :')}
+  verifyBoth(){this.toastr.error('Verify Phone Number & Pay Advance Payment','Details :')}
+  verifyPayment(){this.toastr.error('Pay Advance Payment','Details :')}
+  pnVerify(){this.toastr.success('Phone number verify successfully','Details :')}
+  
 
 // select box
 models=[
@@ -151,6 +180,76 @@ models=[
   {name:'Other Type'}
 ]
 
+
+// model type
+modelShow=false;
+
+modelS(){this.modelShow=true;}
+modelSC(){this.modelShow=false;}
+
+// top types
+offShoulderTop(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Off Shoulder Top" '}
+cropTop(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Crop Top" '}
+crossOverTop(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Cross Over Top" '}
+ShirtStyleTop(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Shirt Style Top" '}
+OneShoulderTop(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"One Shoulder Top" '}
+CinchedWaistTop(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Cinched Waist Top" '}
+maxiTop(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Maxi Top" '}
+KaftanTops(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Kaftan Top" '}
+
+// skirt
+skirt(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
+skirt1(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
+skirt2(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
+skirt3(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
+skirt4(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
+
+// lehenga
+lehenga(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
+lehenga1(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
+lehenga2(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
+lehenga3(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
+lehenga4(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
+
+// other type
+Jacket(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Jacket" '}
+RTWS(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Ready To Wear Saree" '}
+Churidar(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Churidar" '}
+Shirt(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Shirt" '}
+Trouser(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Trouser" '}
+Salwar(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Salwar" '}
+JumpSuit(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Jump Suit" '}
+Kurti(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Kurti" '}
+Others(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Others" '}
+
+// blouse
+PrincessCutBlouse(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Princess Cut Blouse" '}
+SleevelessBlouse(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Sleeveless Blouse" '}
+DartedBlouse(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Darted Blouse" '}
+EmbroideryBlouse(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Pattern Blouse" '}
+PatternBlouse(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Pattern Blouse" '}
+// carousel
+customOptions: OwlOptions = {
+  loop: true,
+  autoplay: false,
+  dots: false,
+  center: true,
+  autoWidth: true,
+  items:3,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true,
+  responsive:{
+    0:{
+        items:3
+    },
+    576:{
+        items:3,
+    },
+    992:{
+        items:4,
+    }
+  }
+}
 
 // otp
 
@@ -212,11 +311,12 @@ onOtpChange(otpcode: any) {
         this.otpvisible=false
         // for(let userD of user){}
         this.data.add_user(this.user_order_details);
+        this.pnVerify();
         console.log(this.user_order_details.name)
         console.log(this.user_order_details.phone_number)
     })
     .catch((error) => {
-      alert(error.message);
+      this.toastr.error(error.message,'Details :')
       this.otpvisible=false
     });
   }
