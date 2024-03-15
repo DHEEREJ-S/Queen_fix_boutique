@@ -198,18 +198,22 @@ maxiTop(){this.user_order_details.description="";this.user_order_details.descrip
 KaftanTops(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Kaftan Top" '}
 
 // skirt
-skirt(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
-skirt1(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
-skirt2(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
-skirt3(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
-skirt4(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
+ALineSkirt(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"A Line Skirt" '}
+AsymmetricSkirt(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Asymmetric Skirt" '}
+BellSkirt(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Bell Skirt" '}
+BoxPleatSkirt(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Box Pleat Skirt" '}
+BubbleSkirt(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Bubble Skirt" '}
+MaxiSkirt(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Maxi Skirt" '}
+MidiSkirt(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Midi Skirt" '}
+MiniSkirt(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Mini Skirt" '}
 
 // lehenga
-lehenga(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
-lehenga1(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
-lehenga2(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
-lehenga3(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
-lehenga4(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"" '}
+ALineL(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"A-Line Lehenga" '}
+HalfSareeL(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Half Saree Lehenga" '}
+MeshL(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Mesh Lehenga" '}
+MultiLayersL(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Multi-Layers Lehenga" '}
+ShararaL(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Sharara Lehenga" '}
+ShortL(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Short Lehenga" '}
 
 // other type
 Jacket(){this.user_order_details.description="";this.user_order_details.description=this.user_order_details.description+'"Jacket" '}

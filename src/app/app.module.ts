@@ -28,6 +28,9 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { Environment } from './firebase/environments/environment';
 import { NgOtpInputModule } from  'ng-otp-input';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { TopComponent } from './top/top.component';
+import { LehengaComponent } from './lehenga/lehenga.component';
+import { SkirtComponent } from './skirt/skirt.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +46,9 @@ import { NgSelectModule } from '@ng-select/ng-select';
     OrderComponent,
     AdminLoginComponent,
     AdminPanelComponent,
+    TopComponent,
+    LehengaComponent,
+    SkirtComponent,
   ],
   imports: [
     BrowserModule,

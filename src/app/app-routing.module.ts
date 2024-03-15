@@ -10,11 +10,17 @@ import { OrderComponent } from './order/order.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { DataService } from './firebase/service/data.service';
+import { LehengaComponent } from './lehenga/lehenga.component';
+import { TopComponent } from './top/top.component';
+import { SkirtComponent } from './skirt/skirt.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'service',component:ServiceComponent},
-  {path:'gallery',component:GalleryComponent},
+  // {path:'gallery',component:GalleryComponent},
+  {path:'service/lehenga',component:LehengaComponent},
+  {path:'service/top',component:TopComponent},
+  {path:'service/skirt',component:SkirtComponent},
   {path:'aboutus',component:AboutusComponent},
   {path:'service/blouse',component:BlouseComponent},
   {path:'contact',component:ContactComponent},

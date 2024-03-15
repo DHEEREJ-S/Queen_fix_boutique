@@ -1,0 +1,260 @@
+#skirt{
+    background-color: rgb(241, 239, 246);
+}
+#skirt .banner{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#skirt .row{
+    justify-content: space-evenly;
+    margin: 0;
+    color: rgb(51, 4, 96);
+    font-family:'__Poppins_687492','__Poppins_Fallback_687492';
+}
+#skirt .row h2{
+    font-weight: 800;
+}
+#skirt .row p{
+    text-align: justify;
+}
+#skirt .photo{
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#skirt .asymmetric,#skirt .bubble, #skirt .maxi, #skirt .mini{
+    background-color: white;
+}
+#skirt .b_gallery{
+    background-color: white;
+}
+#skirt .b_gallery .gcard{
+    border-radius: 10px;
+    border: 1px solid rgb(51, 4, 96);
+}
+#skirt .b_gallery .head{
+    color: rgb(51, 4, 96);
+    font-weight: 600;
+    font-style: italic;
+    font-family:'__Poppins_687492','__Poppins_Fallback_687492';
+    letter-spacing: 2px;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 400px){
+    #skirt .banner{
+        height: 125px;
+    }
+    #skirt .row{
+        margin: 0;
+        padding: 20px 0px;
+    }
+    #skirt .row h2{
+        font-size: 20px;
+    }
+    #skirt .row p{
+        font-size: 14px;
+    }
+    #skirt .photo{
+        height: 220px;
+    }
+    #skirt .asymmetric,#skirt .bubble, #skirt .maxi, #skirt .mini{
+        flex-direction: column-reverse;
+    }
+    #skirt .b_gallery{
+        padding: 20px 0px;
+    }
+    #skirt .b_gallery .gcard{
+        height: 150px;
+    }
+    #skirt .b_gallery .head{
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 576px){
+    #skirt .banner{
+        height: 145px;
+    }
+    #skirt .row{
+        margin: 0;
+        padding: 20px 0px;
+    }
+    #skirt .row h2{
+        font-size: 23px;
+    }
+    #skirt .row p{
+        font-size: 15px;
+    }
+    #skirt .photo{
+        height: 220px;
+    }
+    #skirt .asymmetric,#skirt .bubble, #skirt .maxi, #skirt .mini{
+        flex-direction: column-reverse;
+    }
+    #skirt .b_gallery{
+        padding: 20px 0px;
+    }
+    #skirt .b_gallery .gcard{
+        height: 170px;
+    }
+    #skirt .b_gallery .head{
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    #skirt .banner{
+        height: 185px;
+    }
+    #skirt .row{
+        margin: 0;
+        padding: 25px 0px;
+    }
+    #skirt .row h2{
+        font-size: 26px;
+    }
+    #skirt .row p{
+        font-size: 17px;
+    }
+    #skirt .photo{
+        height: 200px;
+    }
+    #skirt .b_gallery{
+        padding: 20px 0px;
+    }
+    #skirt .b_gallery .gcard{
+        height: 200px;
+    }
+    #skirt .b_gallery .head{
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    #skirt .banner{
+        height: 250px;
+    }
+    #skirt .row{
+        margin: 0;
+        padding: 30px 0px;
+    }
+    #skirt .row h2{
+        font-size: 29px;
+    }
+    #skirt .row p{
+        font-size: 17px;
+    }
+    #skirt .photo{
+        height: 250px;
+    }
+    #skirt .b_gallery{
+        padding: 25px 0px;
+    }
+    #skirt .b_gallery .gcard{
+        height: 220px;
+    }
+    #skirt .b_gallery .head{
+        font-size: 26px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    #skirt .banner{
+        height: 330px;
+    }
+    #skirt .row{
+        margin: 0;
+        padding: 35px 0px;
+    }
+    #skirt .row h2{
+        font-size: 32px;
+    }
+    #skirt .row p{
+        font-size: 20px;
+    }
+    #skirt .photo{
+        height: 300px;
+    }
+    #skirt .b_gallery{
+        padding: 20px 0px;
+    }
+    #skirt .b_gallery .gcard{
+        height: 250px;
+    }
+    #skirt .b_gallery .head{
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1400px){
+    #skirt .banner{
+        height: 380px;
+    }
+    #skirt .row{
+        margin: 0;
+        padding: 40px 0px;
+    }
+    #skirt .row h2{
+        font-size: 35px;
+    }
+    #skirt .row p{
+        font-size: 20px;
+    }
+    #skirt .photo{
+        height: 300px;
+    }
+    #skirt .b_gallery{
+        padding: 20px 0px;
+    }
+    #skirt .b_gallery .gcard{
+        height: 290px;
+    }
+    #skirt .b_gallery .head{
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 1400px){
+    #skirt .banner{
+        height: 380px;
+    }
+    #skirt .row{
+        margin: 0;
+        padding: 40px 0px;
+    }
+    #skirt .row h2{
+        font-size: 35px;
+    }
+    #skirt .row p{
+        font-size: 22px;
+    }
+    #skirt .photo{
+        height: 300px;
+        border-radius: 10px 1px 10px 1px;
+    }
+    #skirt .b_gallery{
+        padding: 20px 0px;
+    }
+    #skirt .b_gallery .gcard{
+        height: 330px;
+    }
+    #skirt .b_gallery .head{
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+}

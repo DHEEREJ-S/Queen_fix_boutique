@@ -1,0 +1,260 @@
+#top{
+    background-color: rgb(241, 239, 246);
+}
+#top .banner{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#top .row{
+    justify-content: space-evenly;
+    margin: 0;
+    color: rgb(51, 4, 96);
+    font-family:'__Poppins_687492','__Poppins_Fallback_687492';
+}
+#top .row h2{
+    font-weight: 800;
+}
+#top .row p{
+    text-align: justify;
+}
+#top .photo{
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#top .crop,#top .kaftan,#top .off_shoulder,#top .shirt_style{
+    background-color: white;
+}
+#top .b_gallery{
+    background-color: white;
+}
+#top .b_gallery .gcard{
+    border-radius: 10px;
+    border: 1px solid rgb(51, 4, 96);
+}
+#top .b_gallery .head{
+    color: rgb(51, 4, 96);
+    font-weight: 600;
+    font-style: italic;
+    font-family:'__Poppins_687492','__Poppins_Fallback_687492';
+    letter-spacing: 2px;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 400px){
+    #top .banner{
+        height: 125px;
+    }
+    #top .row{
+        margin: 0;
+        padding: 20px 0px;
+    }
+    #top .row h2{
+        font-size: 20px;
+    }
+    #top .row p{
+        font-size: 14px;
+    }
+    #top .photo{
+        height: 220px;
+    }
+    #top .crop,#top .kaftan,#top .off_shoulder,#top .t{
+        flex-direction: column-reverse;
+    }
+    #top .b_gallery{
+        padding: 20px 0px;
+    }
+    #top .b_gallery .gcard{
+        height: 150px;
+    }
+    #top .b_gallery .head{
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 576px){
+    #top .banner{
+        height: 145px;
+    }
+    #top .row{
+        margin: 0;
+        padding: 20px 0px;
+    }
+    #top .row h2{
+        font-size: 23px;
+    }
+    #top .row p{
+        font-size: 15px;
+    }
+    #top .photo{
+        height: 220px;
+    }
+    #top .crop,#top .kaftan,#top .off_shoulder,#top .t{
+        flex-direction: column-reverse;
+    }
+    #top .b_gallery{
+        padding: 20px 0px;
+    }
+    #top .b_gallery .gcard{
+        height: 170px;
+    }
+    #top .b_gallery .head{
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    #top .banner{
+        height: 185px;
+    }
+    #top .row{
+        margin: 0;
+        padding: 25px 0px;
+    }
+    #top .row h2{
+        font-size: 26px;
+    }
+    #top .row p{
+        font-size: 17px;
+    }
+    #top .photo{
+        height: 200px;
+    }
+    #top .b_gallery{
+        padding: 20px 0px;
+    }
+    #top .b_gallery .gcard{
+        height: 200px;
+    }
+    #top .b_gallery .head{
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    #top .banner{
+        height: 250px;
+    }
+    #top .row{
+        margin: 0;
+        padding: 30px 0px;
+    }
+    #top .row h2{
+        font-size: 29px;
+    }
+    #top .row p{
+        font-size: 17px;
+    }
+    #top .photo{
+        height: 250px;
+    }
+    #top .b_gallery{
+        padding: 25px 0px;
+    }
+    #top .b_gallery .gcard{
+        height: 220px;
+    }
+    #top .b_gallery .head{
+        font-size: 26px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    #top .banner{
+        height: 330px;
+    }
+    #top .row{
+        margin: 0;
+        padding: 35px 0px;
+    }
+    #top .row h2{
+        font-size: 32px;
+    }
+    #top .row p{
+        font-size: 20px;
+    }
+    #top .photo{
+        height: 300px;
+    }
+    #top .b_gallery{
+        padding: 20px 0px;
+    }
+    #top .b_gallery .gcard{
+        height: 250px;
+    }
+    #top .b_gallery .head{
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1400px){
+    #top .banner{
+        height: 380px;
+    }
+    #top .row{
+        margin: 0;
+        padding: 40px 0px;
+    }
+    #top .row h2{
+        font-size: 35px;
+    }
+    #top .row p{
+        font-size: 20px;
+    }
+    #top .photo{
+        height: 300px;
+    }
+    #top .b_gallery{
+        padding: 20px 0px;
+    }
+    #top .b_gallery .gcard{
+        height: 290px;
+    }
+    #top .b_gallery .head{
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media screen and (min-width: 1400px){
+    #top .banner{
+        height: 380px;
+    }
+    #top .row{
+        margin: 0;
+        padding: 40px 0px;
+    }
+    #top .row h2{
+        font-size: 35px;
+    }
+    #top .row p{
+        font-size: 22px;
+    }
+    #top .photo{
+        height: 300px;
+        border-radius: 10px 1px 10px 1px;
+    }
+    #top .b_gallery{
+        padding: 20px 0px;
+    }
+    #top .b_gallery .gcard{
+        height: 330px;
+    }
+    #top .b_gallery .head{
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+}
